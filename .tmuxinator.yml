@@ -1,0 +1,5 @@
+name: imike.pw
+root: ~/git/imike.pw
+windows:
+  - editor: nvim
+  - server: yarn start
