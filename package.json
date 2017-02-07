@@ -3,7 +3,7 @@
   "name": "miguel-palau",
   "homepage": "http://imike.pw/",
   "twitter": "mpalau",
-  "repository": "https://github.com/mike3run/blog",
+  "repository": "https://github.com/mike3run/imike.pw",
   "scripts": {
     "lint:js": "eslint --ignore-path .gitignore --fix .",
     "lint:css": "stylelint \"src/**/*.css\"",
