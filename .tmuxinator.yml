@@ -1,4 +1,4 @@
-name: imike.pw
+name: imike
 root: ~/git/imike.pw
 windows:
   - editor: nvim

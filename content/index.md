@@ -1,44 +1,28 @@
 ---
-title: Phenomic base theme
+title: Miguel Palau
 layout: Homepage
-hero: https://farm4.staticflickr.com/3949/15589950511_3675b15e59_k.jpg
-# hero credit: https://www.flickr.com/photos/pslee999/15589950511/
+hero: https://cldup.com/-LMRRtF6f8.jpg
 cta:
   label: About this theme
   link: "about"
 ---
 
-Hi there. Before having fun with Phenomic, be sure to read the documentation :
+Hi there! Thanks for stopping by 👋🏼
 
-* [How to setup a new project with Phenomic](https://phenomic.io/docs/setup/)
-* [Getting Started with Phenomic](https://phenomic.io/docs/getting-started/)
-* [Usage & APIs](https://phenomic.io/docs/usage/)
-* [FAQ](https://phenomic.io/docs/faq/)
+My name is Miguel Palau I'm a Web Developer from [Puebla, México](https://en.wikipedia.org/wiki/Puebla)
 
-Also take a look at
-[existing websites that use Phenomic](https://phenomic.io/showcase/),
-some projects share their source code!
+I love working with modern web technologies and I'm passionate about always staying sharp on my skills and learning new stuff all the time.
 
-<!-- demo to show you that you can use "assets" folder -->
-<small>
-  Built with
-  <a href="https://facebook.github.io/react/">
-    <img alt="" src="assets/react.svg" width="16" height="16" />
-    React
-  </a>.
-</small>
+Also I enjoy working with and contributing to [open source](https://github.com/mike3run/) and also I love tweaking my terminal and [dotfiles](https://github.com/mike3run/dotfiles)
 
----
+Currently I work as a FullStack Developer at [Pixel2Html](https://www.pixel2html.com/)
 
-You may want to take a look at the [404.html](/404.html) and tweak the render.
+I organize a monthly Meetup in Puebla called [DevNights](https://www.meetup.com/es-ES/DevNightsMX/) were we talk about open source technologies, eat some 🍕 and have a few 🍺. If you're around the area you should probably go 💁🏻.
 
-If you need to make adjustments, you can directly alter page layouts in
-``src/layouts/``;
-small things like the header, footer, buttons and so on can be changed in
-``src/components/``;
-and for colors and common CSS variables, you can modify ``postcss.config.js``.
+Ocassionally I [tweet](https://twitter.com/mpalau) in a mix of spanish and english and write on [Pixel's Blog](https://www.pixel2html.com/blog/) and I'm also trying to blog more often here as well.
 
-_You feel like the base theme is not enough or you just saw something wrong?_
-[Please help us make Phenomic better!](https://phenomic.io/contributing/)
+This webpage was built using [Phenomic](https://phenomic.io/) and its hosted on [Github Pages](https://pages.github.com/) feel free to check the [source code](https://github.com/mike3run/imike.pw)
+
+Take a look around at some of my posts below:
 
 ---
