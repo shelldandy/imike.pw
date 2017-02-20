@@ -3,8 +3,8 @@ title: Miguel Palau
 layout: Homepage
 hero: https://cldup.com/-LMRRtF6f8.jpg
 cta:
-  label: ✉️
-  link: "mailto:mpalauzarza@gmail.com"
+  label: Posts
+  link: "posts"
 ---
 
 Hi there! Thanks for stopping by 👋🏼
@@ -22,7 +22,3 @@ I organize a monthly Meetup in Puebla called [DevNights](https://www.meetup.com/
 Ocassionally I [tweet](https://twitter.com/mpalau) in a mix of spanish and english and write on [Pixel's Blog](https://www.pixel2html.com/blog/) and I'm also trying to blog more often here as well.
 
 This webpage was built using [Phenomic](https://phenomic.io/) and its hosted on [Github Pages](https://pages.github.com/) feel free to check the [source code](https://github.com/mike3run/imike.pw)
-
-Take a look around at some of my posts below:
-
----
