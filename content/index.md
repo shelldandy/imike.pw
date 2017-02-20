@@ -3,8 +3,8 @@ title: Miguel Palau
 layout: Homepage
 hero: https://cldup.com/-LMRRtF6f8.jpg
 cta:
-  label: About this theme
-  link: "about"
+  label: ✉️
+  link: "mailto:mpalauzarza@gmail.com"
 ---
 
 Hi there! Thanks for stopping by 👋🏼
