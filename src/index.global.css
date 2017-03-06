@@ -89,3 +89,11 @@ hr {
   opacity: 0.2;
   margin: 2rem 0;
 }
+
+code {
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  color: #c25;
+  padding: 1px 3px;
+  border-radius: 3px;
+}
