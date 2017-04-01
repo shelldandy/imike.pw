@@ -25,6 +25,7 @@ const Header = (props, { metadata: { pkg } }) => (
           <a
             href={`https://twitter.com/${pkg.twitter}`}
             className={styles.link}
+            target='_blank'
           >
             <Svg svg={twitterSvg} cleanup />
             { 'Twitter' }
@@ -35,6 +36,7 @@ const Header = (props, { metadata: { pkg } }) => (
           <a
             href={pkg.repository}
             className={styles.link}
+            target='_blank'
           >
             <Svg svg={gitHubSvg} cleanup />
             { 'GitHub' }

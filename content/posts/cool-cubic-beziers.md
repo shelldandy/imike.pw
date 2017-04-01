@@ -15,4 +15,4 @@ cubic-bezier(0,0,0,2.41)
 
 Here's a gif just in case the UI changes later on or you haven't seen what I'm talking about
 
-![Imgur](http://i.imgur.com/sGoIJ5t.gifv)
+![Such play wow](http://i.imgur.com/sGoIJ5t.gif)
