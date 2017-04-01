@@ -7,7 +7,8 @@ layout: Post
 
 ## I just wasted 2 days of my life so you don't have to
 
-![That was me yesterday 100% Real No Fake](http://media0.giphy.com/media/ReImZejkBnqYU/200w.gif)
+![That was me yesterday 100% Real No
+Fake](https://media0.giphy.com/media/ReImZejkBnqYU/200w.gif)
 
 So you're a brave or curious person who decided to try out to build
 a webpack configuration from scratch and since before that you've used
