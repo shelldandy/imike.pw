@@ -15,4 +15,4 @@ cubic-bezier(0,0,0,2.41)
 
 Here's a gif just in case the UI changes later on or you haven't seen what I'm talking about
 
-![Such play](https://cl.ly/2H1o1U112C1y/spotify.gif)
+![Imgur](http://i.imgur.com/sGoIJ5t.gifv)
