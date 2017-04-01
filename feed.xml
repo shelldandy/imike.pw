@@ -1,0 +1,671 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[miguel-palau]]></title><description><![CDATA[miguel-palau]]></description><link>http://mpz.im/</link><generator>RSS for Node</generator><lastBuildDate>Sat, 01 Apr 2017 18:50:03 GMT</lastBuildDate><atom:link href="http://mpz.im/feed.xml" rel="self" type="application/rss+xml"/><item><title><![CDATA[Cool cubic beziers]]></title><description><![CDATA[<h2 id="so-spotify-web-looks-sweet"><a href="#so-spotify-web-looks-sweet" class="phenomic-HeadingAnchor">#</a>So Spotify Web Looks Sweet</h2>
+<p>I really loved its new play button click situation so i decided to take a peak that their CSS code and snatched this bezier I shall save for future reference obviously:</p>
+<pre><code class="hljs language-css"><span class="hljs-selector-tag">cubic-bezier</span>(0,0,0,2<span class="hljs-selector-class">.41</span>)</code></pre>
+<p>Here's a gif just in case the UI changes later on or you haven't seen what I'm talking about</p>
+<p><img src="http://i.imgur.com/sGoIJ5t.gif" alt="Such play wow"></p>
+]]></description><link>http://mpz.im/posts/cool-cubic-beziers/</link><guid isPermaLink="true">http://mpz.im/posts/cool-cubic-beziers/</guid><pubDate>Sat, 01 Apr 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[How to use ES6 on Webpack]]></title><description><![CDATA[<h2 id="i-just-wasted-2-days-of-my-life-so-you-dont-have-to"><a href="#i-just-wasted-2-days-of-my-life-so-you-dont-have-to" class="phenomic-HeadingAnchor">#</a>I just wasted 2 days of my life so you don't have to</h2>
+<p><img src="http://media0.giphy.com/media/ReImZejkBnqYU/200w.gif" alt="That was me yesterday 100% Real No Fake"></p>
+<p>So you're a brave or curious person who decided to try out to build
+a webpack configuration from scratch and since before that you've used
+those push-button-receive-bacon configs you were expecting to be able to
+use those fancy pants <code>import something from 'module'</code> but hey breaking
+news: Node doesn't work that way, at least not out of the box.</p>
+<p>So here's what you will need to get that thing working:</p>
+<pre><code>yarn add babel-{cli,preset-env,core}
+</code></pre>
+<p>That will install babel-cli, babel-preset-env and babel-core now in your
+folder where you keep you <code>webpack.conf.js</code> or similar plop another
+<code>.babelrc</code> file. (Yeah, I know ANOTHER) and add the following:</p>
+<pre><code class="hljs language-.json">{
+  <span class="hljs-attr">"presets"</span>: [
+    [<span class="hljs-string">"env"</span>, {
+      <span class="hljs-attr">"targets"</span>: {
+        <span class="hljs-attr">"node"</span>: <span class="hljs-number">4</span>
+      }
+    }]
+  ]
+}</code></pre>
+<p>So basically that tells babel, hey translate your stuff so even Node 4 and
+upwards can understand modules kthanksbai.</p>
+<p>Now adjust your scripts inside your <code>package.json</code> as follows:</p>
+<pre><code class="hljs language-.json">{
+  <span class="hljs-attr">"scripts"</span>: {
+  <span class="hljs-attr">"build"</span>: <span class="hljs-string">"babel-node node_modules/.bin/webpack"</span>
+  }
+}</code></pre>
+<p>You can rename it accordingly but you get the drill. Basically we are
+running a version of babel that executes node stuff and it transpiles your stuff as well.</p>
+<p>Now just run <code>yarn run build</code> and much wow it works!</p>
+]]></description><link>http://mpz.im/posts/how-to-use-es6-in-webpack/</link><guid isPermaLink="true">http://mpz.im/posts/how-to-use-es6-in-webpack/</guid><pubDate>Sun, 05 Mar 2017 00:00:00 GMT</pubDate></item><item><title><![CDATA[Humans Need Not Apply]]></title><description><![CDATA[<h2 id="lo-que-sea-que-hagas-será-cada-día-más-irrelevante-a-menos-que-planees"><a href="#lo-que-sea-que-hagas-ser%C3%A1-cada-d%C3%ADa-m%C3%A1s-irrelevante-a-menos-que-planees" class="phenomic-HeadingAnchor">#</a>Lo que sea que hagas será cada día más irrelevante a menos que planees</h2>
+<p>Quiero que de entrada dejes de hacer todo lo que estás haciendo y veas este video solo para refrescar ideas.</p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/7Pq-S557XQU?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;"></iframe></span></p>
+<p>El video no es tan nuevo ya tiene un año desde que salió y en su momento lo compartí en Facebook. En parte fue gracias a ver este video que decidí comenzar a aprender a programar para tener el control de mi destino en mis manos. Ya que aunque México y particularmente Oaxaca se encuentren muy lejos de las olas de cambio tecnológicas el hacer como que no existen es una tonteria. Ojalá hubiera visto con más claridad eso antes y hasta cierto punto podía verlo pero no sentía que podía aportar algo o hacer algo al respecto. Ahora que he leído <a href="http://zerotoonebook.com/">ZerotoOne</a> mis ojos se encuentran mucho más abiertos a todo lo que es nuestra sociedad en realidad. Este libro vale su peso en oro, no lo podría recomendar más, escrito por Peter Thiel uno de los fundadores de Paypal. Peter Thiel fue además el primer inversionista externo de Facebook con un total de 10.2% de acciones. El wey sabe de lo que habla y deberías hacerle caso.</p>
+<p><a href="http://zerotoonebook.com/"><img src="https://i0.wp.com/zerotoonebook.com/wp-content/uploads/2013/03/bookSquare1.jpg" alt="Compra y lee este libro ya mismo!"></a></p>
+<p>Este libro habla muchas verdades en muy poco tiempo muchas de las cuales son importantes y relevantes en el mundo de los negocios y la tecnología aka Startups. Pero por hablar de un tema un poco más amplio les quiero hablar de una situación analizada en el libro que se me hizo muy real y triste al mismo tiempo.</p>
+<figure>![Toma tu tiempo de leer esta situación](https://i2.wp.com/s3.amazonaws.com/f.cl.ly/items/270r393Y1A3C1T3r0h3f/4%20Ejes.png?ssl=1)
+<figcaption>Toma tu tiempo de leer esta situación</figcaption>
+</figure>
+<p>Básicamente nos habla de que existen 4 maneras en que una sociedad puede tener una actitud hacia el futuro dependiendo de como se vean las cosas:</p>
+<ul>
+<li>Optimista Definido</li>
+<li>Optimista Indefinido</li>
+<li>Pesimista Definido</li>
+<li>Pesimista Indefinido</li>
+</ul>
+<p>El pesimista indefinido es aquel que piensa que inevitablemente todo se irá a la mierda pero no sabe si será de golpe o gradualmente. Por lo mismo prefiere no esforzarse mucho y esperar a que el apocalipsis llegue de una manera cómoda. Por eso en Europa las personas toman tantas vacaciones.</p>
+<p>El pesimista definido cree que el futuro se puede saber pero lo que ve no es nada bueno, así que debe prepararse para esto. En el libro pone como ejemplo a China, capital mundial de la globalización y competitividad. Mientras todos veían un crecimiento anual del 10% en la economía de China faltaba ver un detalle muy simple. Si creces de 10 a 11 creciste un 10% pero si creces de 100 a 101 creciste un 1%. Recuerdo mucho que en la universidad el <a href="https://www.facebook.com/bernardo.reyesguerra">Dr. Bernardo Reyes</a> comentó eso; quizá China parezca que está creciendo muy rápido (y osea si está creciendo rápido) pero si su base de arranque fue muy baja entonces su tasa de crecimiento se puede ver más inflada que la de otro país más desarrollado queriendo hacer lo mismo. El modelo de negocios de China en general es el de copiar y competir mundialmente. Pero cuando compites los márgenes se van reduciendo y no es sostenible a largo plazo, cosa que podemos ver actualmente.</p>
+<p>El optimista definido es aquel que sabe que el futuro será mejor que el presente si se enfoca en lograrlo y planea su camino al éxito. Esto es como USA entre los 50’s y 60’s. El hombre llegó a la Luna, se hizo el canal de Panamá. El Empire State se completó en solo 2 años. Se hizo el Golden Gate Bridge. Esta generación no temía hacer grandes planes y luego cumplirlos cosa que afectó a los Baby Boomers aka papás cosa que afectó a los millennials aka nosotros. Pero más sobre eso en el siguiente párrafo.</p>
+<p>Ahora viene nuestra sociedad: el optimista indefinido es aquel que piensa que el futuro va a ser mejor, pero no sabe como específicamente por lo tanto no hace planes. Espera beneficiarse del futuro pero no tiene ni idea de como va a ocurrir eso. Recordando lo arrancado vamos a checar que pasó con los baby boomers. Ellos vivieron su infancia en el mundo hecho por sus padres optimistas definidos, por lo tanto era natural ver y pensar que el mundo se estaba poniendo mejor y mejor cada año <em>incluso sin su intervención</em>. Por lo mismo los boomers tenían grandes espectativas pero pocos planes para alcanzarlas. Obvio esto no fue sostenible y al final solo los <em>elite boomers</em> tuvieron una ventaja sobre los demás. Y como solo los ganadores cuentan la historia pues para ellos la historia fue la de el futuro es excelente y llegará. Cómo seguir el camino establecido funcionó para ellos no pueden imaginar como no funcionaría para ti.</p>
+<p>De ahí se pueden explicar muchas cosas malas de estos tiempos. Vivimos con finanzas indefinidas, políticas indefinidas, filosofía indefinida y ya de paso una vida indefinida. Y esto es real lo veo en todos lados a mi alrededor. Fue como si me hubieran sacado de la Matrix para entender la realidad de las cosas.</p>
+<p>Las demás visiones del futuro son sustentables de alguna forma. El optimista definido construye su futuro y es feliz. El pesimista definido copia lo que existe y no espera nada nuevo. El pesimista indefinido tiene bajas espectativas y no se esfuerza mucho así que posiblemente si cumpla sus espectativas y sea feliz. En cambio el optimista indefinido es solo una receta para la frustración y tristeza.</p>
+<p>Esperas tu futuro como algo mejor pero no haces nada para llegar a el.</p>
+<p>Este tema es muy largo e interesante y me encantaría escribir más sobre el pero llega el momento de arrancar mi día. Les super recomiendo ver ese video y leer ese libro. El futuro es bueno y tu tienes control para llegar a este en tus términos. 😄</p>
+<p>En esta semana escribo la parte 2 donde vinculo este libro con ese video con algo muy nuevo que salió aka el nuevo Facebook.</p>
+<iframe src="https://embed.spotify.com/?uri=spotify%3Aalbum%3A5EPWGJr2kdQCRwYNniCA1l" width="300" height="380" frameborder="0"></iframe>
+]]></description><link>http://mpz.im/posts/humans-need-not-apply/</link><guid isPermaLink="true">http://mpz.im/posts/humans-need-not-apply/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Wed, 07 Oct 2015 12:33:22 GMT</pubDate></item><item><title><![CDATA[Herramientas para Startups]]></title><description><![CDATA[<h1 id="herramientas-para-startups"><a href="#herramientas-para-startups" class="phenomic-HeadingAnchor">#</a>Herramientas para Startups</h1>
+<p>En esta ocasión quiero escribir acerca de las herramientas que ocupo en GeekBytes para hacer mi vida más fácil y que siento pueden hacer tu vida mejor también.</p>
+<h2 id="1-bittorrent-sync--gratis"><a href="#1-bittorrent-sync--gratis" class="phenomic-HeadingAnchor">#</a><a href="https://www.getsync.com/">1 Bittorrent Sync – Gratis</a></h2>
+<p>Bittorrent Sync es una chulada de cosa, básicamente es Dropbox pero que funciona de manera local y privada. Osea, una nube sin la nube. Hay cliente para Windows, Mac, iOS, Android y Linux. Otra carácterística cool que tiene es que puedes configurarle un <a href="https://en.wikipedia.org/wiki/Network-attached_storage"><strong>disco duro conectado a la red (NAS)</strong></a> de tal manera que crees una verdadera nube privada.</p>
+<p>En cuanto al espacio solo estás limitado por tu capacidad de disco duro así que a darle duro. En cuanto al tema de Android está genial ya que con Sync puedes transferir un respaldo de todas tus fotos de manera inalámbrica y muy fácil a tu computadora o disco duro. Es gratis para usar pero un pago único de $40 USD desbloquea la capacidad de sincronización selectiva. Un must si tienes una MacBook Air por ejemplo.</p>
+<h2 id="2-slack--gratis"><a href="#2-slack--gratis" class="phenomic-HeadingAnchor">#</a><a href="https://slack.com/">2 Slack – Gratis</a></h2>
+<p>Todos necesitamos comunicarnos para lograr las cosas y normalmente la comunicación entre equipos es algo asqueroso en el formato tradicional de e-mail o en el formato <em>novedoso</em> de grupos de Whatsapp.</p>
+<p>Slack es una combinación de ambos pero mucho mucho más poderoso ya que te permite crear salones de chat tanto para el equipo completo como salas privadas dependiendo de cada proyecto o directamente inbox a personas individuales. Tiene capacidad de enviar archivos adjuntos y de conectar robots o hacer el tuyo con su API sencilla de entender.</p>
+<p><a href="http://www.miguel.click/blog/2015/09/09/integrando-todoist-ifttt-y-slack-miideaes/"><strong>Hice un post sobre como lo usamos nosotros hace un tiempo</strong>.</a></p>
+<h2 id="3-todoist--gratis"><a href="#3-todoist--gratis" class="phenomic-HeadingAnchor">#</a><a href="https://todoist.com/">3 Todoist – Gratis</a></h2>
+<p>Todoist es un gestor de tareas que se ve bonito, funciona en todos lados y sirve para el trabajo en equipo. Creo que no hay mucho que decir más que pruébalo para entender como es que es tan cool. Piensa en Clear pero más bonito y funcional en más plataformas pero colaborativo 😍.</p>
+<h2 id="4-focus--20-usd"><a href="#4-focus--20-usd" class="phenomic-HeadingAnchor">#</a><a href="https://heyfocus.com/">4 Focus – $20 USD</a></h2>
+<p>Focus es una pequeña herramienta que vive en tu barra de estado de la Mac. Y cumple una sola función: que te concentres.</p>
+<p><img src="https://i1.wp.com/s3.amazonaws.com/f.cl.ly/items/1v0R152R2n0a1B042K1z/Focus.png?ssl=1" alt="Un ejemplo de lo que pasa si quiero entrar a Facebook con Focus activado"></p>
+<p>Muy bueno pues puedes configurarlo por intervalos de tiempo pre-establecidos y eso puede servir como una especie de Timer Pomodoro para la concentración. Tiene un modo estricto donde aunque lo elimines no se puede evitar la concentración durante ese tiempo. Úsalo con cuidado.</p>
+<h2 id="5-cloudapp--gratis"><a href="#5-cloudapp--gratis" class="phenomic-HeadingAnchor">#</a><a href="https://www.getcloudapp.com/">5 CloudApp – Gratis</a></h2>
+<p>Cuando se trata de compartir archivos con el resto de la humanidad ocupo Cloud. Lo que hace esta pequeña app que igual vive en mi barra de estado de la Mac es que puedes compartir archivos de manera muy fácil solo arrastrándolo al ícono de la nube. Me encantó porque puedes configurarle tu propio dominio. Por ejemplo:</p>
+<p><a href="http://cloud.miguel.click/3S3G0x3D1G3O">http://cloud.miguel.click/3S3G0x3D1G3O</a></p>
+<p>Ese enlace los lleva a un libro excelente que les quiero compartir. Pero noten como la liga empieza con cloud.miguel.click detalles pequeños pero que van contando poco a poco 😉.</p>
+<h2 id="6-ia-writer--20-usd"><a href="#6-ia-writer--20-usd" class="phenomic-HeadingAnchor">#</a><a href="https://ia.net/writer">6 iA Writer – $20 USD</a></h2>
+<p>iA Writer en la herramienta que ocupo para escribir en formato <em>Markdown</em> tanto para este blog como para situaciones de organizar ideas y estructurarlas en GeekyBytes.</p>
+<p>Con markdown es muy fácil darle formato al texto de manera cómoda y sin tener que despegar las manos del teclado. El tiempo de transición de no saberlo usar a amarlo es como de 20 minutos.</p>
+<p><a href="https://daringfireball.net/projects/markdown/basics">El creador de Markdown tiene una guía muy fácil de leer en su blog</a>.</p>
+<p><img src="https://i1.wp.com/s3.amazonaws.com/f.cl.ly/items/2d0p443Z0G2h2Z0R1A46/iA.png?ssl=1" alt="Markdown + iA Writer en todo su esplendor"></p>
+<p>Otro plus que me da iA Writer es que revisa mi sintaxis en cuanto a uso de verbos, adjetivos, sustantivos, adverbios y conjunciones, para escribir bonito vaya.</p>
+<h2 id="7-mindnode--10usd"><a href="#7-mindnode--10usd" class="phenomic-HeadingAnchor">#</a><a href="https://mindnode.com/">7 MindNode – $10USD</a></h2>
+<p>Otra herramienta que ocupo mucho desde la prepa son los mapas mentales mismos que aprendí al leer <a href="http://www.amazon.com.mx/El-Libro-Los-Mapas-Mentales/dp/8479531460/ref=sr_1_1?ie=UTF8&#x26;qid=1443440910&#x26;sr=8-1&#x26;keywords=el+libro+de+los+mapas+mentales">“El libro de los mapas mentales” de Tony Buzan</a> libro que sea dicho de paso mi mamá sigue a media lectura pero eso sí, en su mesa de leer de noche desde hace como 7 años 😂.</p>
+<p>El punto es que solía ser fan de <a href="http://thinkbuzan.com/products/imindmap/">la app oficial de mapas mentales de Tony Buzan</a> pues porque es del creator y te salen así como en el libro. Pero el capitalismo de este señor es imparable 😰 ya que con un precio mínimo de $100 USD con un estricto control de activaciones y además que se actualiza de manera anual pero pagado pos no se puede. Entonces al ser herramientas para startups hay que pensar <em>pobreza</em> claro la primera opción sería hacerlo a mano pero fuchi <strong>we have technology!</strong></p>
+<p>Por eso llega MindNode, $10 USD actualizado eternamente, iCloud y usable en todas tus computadoras.</p>
+<p><img src="https://i2.wp.com/gif.co/sLOR.gif" alt="Yo ahora mismo"></p>
+<h2 id="8-numbers--gratis"><a href="#8-numbers--gratis" class="phenomic-HeadingAnchor">#</a><a href="http://www.apple.com/mx/mac/numbers/">8 Numbers – Gratis</a></h2>
+<p>A veces es necesario usar hojas de cálculo (aka Excel) pero tenemos el problema de que Excel es asqueroso y cuesta.</p>
+<p>Meet Numbers básicamente Excel pero bonito y no tan listo, pero suficiente para mi, seguramente suficiente para ti también.</p>
+<h2 id="9-keynote--gratis"><a href="#9-keynote--gratis" class="phenomic-HeadingAnchor">#</a><a href="http://www.apple.com/mx/mac/keynote/">9 Keynote – Gratis</a></h2>
+<p>Lo mismo para las presentaciones solo que a diferencia de Numbers, Keynote es verdaderamente superior en todo aspecto a PowerPoint. Let’s get that money!</p>
+<h2 id="10-gifs-for-mac--gratis"><a href="#10-gifs-for-mac--gratis" class="phenomic-HeadingAnchor">#</a><a href="https://www.riffsy.com/Mac">10 GIFs for Mac – Gratis</a></h2>
+<p><img src="https://i0.wp.com/www.riffsy.com/static/images/riffsy/splash/popup.gif?ssl=1" alt="Este gif lo dice todo"></p>
+<p>Para nada esencial y productivo pero 100% divertido y útil para bloguear y para chats en slack o telegram entre compañeros de equipo y amigos.</p>
+]]></description><link>http://mpz.im/posts/herramientas-para-startups/</link><guid isPermaLink="true">http://mpz.im/posts/herramientas-para-startups/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Mon, 28 Sep 2015 12:23:15 GMT</pubDate></item><item><title><![CDATA[Top Extensiones de Atom para Front-End Development]]></title><description><![CDATA[<h1 id="top-extensiones-de-atom-para-front-end-development"><a href="#top-extensiones-de-atom-para-front-end-development" class="phenomic-HeadingAnchor">#</a>Top Extensiones de Atom para Front-End Development</h1>
+<p>Para quienes no lo conozcan <a href="https://atom.io/">Atom</a> es un editor de texto <em>a-la</em> Sublime Text pero con un par de ventajas que aunque aún no son tan explotadas será inevitable que se termine coronando como el campeón de campeones sobre Sublime:</p>
+<ul>
+<li>Gratis</li>
+</ul>
+<ul>
+<li>Open-Source</li>
+</ul>
+<p>Sin embargo algunas cosas que he notado no me gustan tanto pero siento que es un pormenor corregible mediante updates como son:</p>
+<ul>
+<li>Sass snippets. (Sass no SCSS)</li>
+</ul>
+<ul>
+<li>Velocidad de arranque (ronda casi los 7-8 segundos el mío, con Sublime hablamos de milésimas)</li>
+</ul>
+<p>  Eso nos indica un par de cosas primero al ser Open-source pues infinidad de gentes van a escribir todo tipo de plugins para hacer todo tipo de cosas lo cual es simplemente genial. Lo otro es que al ser 100% hackeable quiere decir que puedes tomar cualquier componente y manipularlo a tu gusto. Finalmente al estar escrito con coffeescript y less pues está facilito de entender.</p>
+<p>  <img src="http://media4.giphy.com/media/Fbyam9ZAJ3J1m/giphy.gif" alt="Mi mente al ver las posibilidades"></p>
+<p>  Mi mente al ver las posibilidades</p>
+<h2 id="1-css-unit-converter"><a href="#1-css-unit-converter" class="phenomic-HeadingAnchor">#</a><a href="https://atom.io/packages/atom-css-unit-converter">1 CSS Unit Converter</a></h2>
+<p>  Este pequeño plugin hace una cosa y la hace muy bien toma tus sucias unidades de pixeles para convertirlas en hermosas unidades en EMs, REMs, %s, etc.</p>
+<p>  Lo otro que está también increible es el hecho de que deja el comentario para que sepas en el futuro como estaban tus medidas en pixeles y que base se tomó para dicho </p>
+<p>  <img src="https://i.github-camo.com/0d60d3bb7f64d43483dd12c52ee711d025befcb9/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f736574686c6f70657a6d652f61746f6d2d6373732d756e69742d636f6e7665727465722f6d61737465722f7265736f75726365732f6d756c7469706c652d6c696e65732e676966" alt="¿A poco no dan ganas de llorar?"></p>
+<p>  ¿A poco no dan ganas de llorar?</p>
+<h2 id="2-minimap"><a href="#2-minimap" class="phenomic-HeadingAnchor">#</a><a href="https://atom.io/packages/minimap">2 Minimap</a></h2>
+<p>  <img src="https://i.github-camo.com/bb671dcf7706c32eb432472c2cd69d354f824661/68747470733a2f2f6769746875622e636f6d2f61746f6d2d6d696e696d61702f6d696e696d61702f626c6f622f6d61737465722f7265736f75726365732f73637265656e73686f742e706e673f7261773d74727565" alt="Ni idea de porque no es default"></p>
+<p>  Ni idea de porque no es default</p>
+<p>  Este plugin es muy simple, muestra en el lado derecho (o donde queramos, la verdad) de la pantalla un pequeño mapa para ver todo nuestro código de manera simple. </p>
+<p>  <em>Como lo vió en Sublime Text</em></p>
+<h2 id="3-pigments"><a href="#3-pigments" class="phenomic-HeadingAnchor">#</a><a href="https://atom.io/packages/pigments">3 Pigments</a></h2>
+<p>  <img src="https://i.github-camo.com/16c0c12a183c6f57fb33481984593a515777d5e8/68747470733a2f2f6769746875622e636f6d2f61626533332f61746f6d2d7069676d656e74732f626c6f622f6d61737465722f7265736f75726365732f7069676d656e74732e6769663f7261773d74727565" alt="A poco no está bonito"></p>
+<p>  A poco no está bonito</p>
+<p>  Con pigments podemos ver los colores que pongamos e incluso sirve a nível de variables. Wow wow wow. Combínalo con <a href="https://atom.io/packages/minimap-pigments">minimap-pigments</a> para incluso ver los colores en el mini-mapa.</p>
+<h2 id="4-file-icons"><a href="#4-file-icons" class="phenomic-HeadingAnchor">#</a><a href="https://atom.io/packages/file-icons">4 File Icons</a></h2>
+<p>  <img src="https://i.github-camo.com/def93226a57aec0c1ceeb66bcbdaa0fdec0a4c29/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f44616e42726f6f6b65722f66696c652d69636f6e732f6d61737465722f66696c652d69636f6e732e706e67" alt="Much wow!"></p>
+<p>  Much wow!</p>
+<p>  Sin mucha funcionalidad real más bien estética para ver en nuestra side-bar los íconos de cada archivo y saber fácilmente de qué se trata. Bang bang!</p>
+<h2 id="5-atom-material-ui"><a href="#5-atom-material-ui" class="phenomic-HeadingAnchor">#</a><a href="https://atom.io/themes/atom-material-ui">5 Atom Material UI</a></h2>
+<p>  <img src="https://i.github-camo.com/7a7ffbcfb85b59f52ac04e886ac1537ac9efdd12/687474703a2f2f692e696d6775722e636f6d2f326a4e676b52392e706e67" alt="Que bonito"></p>
+<p>  Que bonito</p>
+<p>  Nuevamente otro tema sin mucha utilidad más allá de lo visual, pero por favor, <strong>Material Design</strong></p>
+<p>  <img src="https://i.github-camo.com/153c0835e0a840232dcae9f07ade6a9a1b4156b9/687474703a2f2f692e696d6775722e636f6d2f6c5552337552762e676966" alt="Oh yeah"></p>
+<p>  Oh yeah</p>
+<h2 id="conclusiones"><a href="#conclusiones" class="phenomic-HeadingAnchor">#</a>Conclusiones</h2>
+<p>  Pues creo que estos paquetes son muy pocos ya que mi incursión en Atom lleva alrededor de 2 meses, siento que aún hay muchísimo por explorar y con una velocidad de cambio impresionante.</p>
+<p>  ¡Saludos y los leo en los comentarios!</p>
+]]></description><link>http://mpz.im/posts/extensiones-atom-frontend/</link><guid isPermaLink="true">http://mpz.im/posts/extensiones-atom-frontend/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Fri, 25 Sep 2015 14:40:52 GMT</pubDate></item><item><title><![CDATA[Usando SMACSS para Vivir Contento]]></title><description><![CDATA[<p>Una cosa es escribir código solo para tu uso personal y otra cosa es trabajar en equipo e incluso cuando el tema es personal, regresar a tu viejo código puede llegar a ser algo terrible 😐.</p>
+<p>Por suerte una serie de humanos muy inteligentes pensaron en <a href="https://smacss.com/">una manera muy buena de organizar nuestro CSS</a> más o menos como funcionan las opciones y caminos en la terminal.</p>
+<p><strong>SMACSS: Scalable and Modular Arquitechture for CSS</strong></p>
+<h2 id="los-básicos"><a href="#los-b%C3%A1sicos" class="phenomic-HeadingAnchor">#</a>Los Básicos</h2>
+<p>La situación funciona en pocas palabras así:</p>
+<p><strong>Vamos a ir escribiendo nuestro CSS de manera que todo sea pensado en cuestión de módulos y objetos reusables.</strong></p>
+<p>Para lograr esa situación podemos dividir nuestro CSS en varias secciones que facilitarán nuestra vida tremendamente como son:</p>
+<ul>
+<li>Base</li>
+<li>Layuout (Estructura)</li>
+<li>Modules (Módulos)</li>
+<li>States (Estados)</li>
+<li>Utilities (Herramientas/Utilidades)</li>
+<li>Variables</li>
+</ul>
+<p>De esta manera la vida se vuelve un poco más hermosa pero…</p>
+<figure>![We have it!](https://i1.wp.com/media1.giphy.com/media/CTX0ivSQbI78A/giphy.gif)
+<figcaption>We have it!</figcaption>
+</figure>
+<p><strong>¡Podemos hacer más!</strong></p>
+<h2 id="meet-sass"><a href="#meet-sass" class="phenomic-HeadingAnchor">#</a>Meet Sass</h2>
+<p>Quizá esto sea un poco más avanzado de lo escrito hasta ahora pero si nunca has usado Sass… pues que pena 👻. En verdad Sass te ayuda a vivir la vida de manera más feliz en cuanto a CSS respecta.</p>
+<p>Sass es un preprocesador de CSS que corre <a href="https://www.iterm2.com/">en la terminal</a> <a href="https://incident57.com/codekit/">o en programas especiales</a>. Te ayuda a que tu CSS sea bonito, modular y fácil de escribir. La herramienta perfecta para todo developer.</p>
+<p><a href="http://sass-lang.com/">Aprende más de Sass en su sitio web oficial</a></p>
+<p>Sass tiene 2 estilos de escritura: <strong>.scss</strong> y <strong>.sass</strong>. Si eres un pequeñín entonces lo recomendado para ti es la sintaxis <strong>Scss</strong> pues es idéntica a como ya estás acostumbrado a escribir CSS. Osea, es el paso ideal para dar el salto. Puedes seguir escribiendo CSS normal pero cuando te decidas le puedes ir dando super poderes.</p>
+<h2 id="sass--smacss--"><a href="#sass--smacss--" class="phenomic-HeadingAnchor">#</a>Sass + SMACSS = 💁</h2>
+<p>Bueno bueno, ya aprendiste a usar Sass y estás listo para más (jojo la rima loca) ¿entonces qué sigue? pues sigue aplicar tus conocimientos de manera hermosa y modular usando la metología SMACSS así que vamos adelante.</p>
+<h3 id="imports"><a href="#imports" class="phenomic-HeadingAnchor">#</a>Imports</h3>
+<p>Una cosa hermosa de Sass es que puedes importar muchos archivos uno dentro de otro (espera, ¿qué no CSS normal puede hacer eso de por si?). Erm si, la diferencia está en que con CSS cada “import” que haces genera una petición nueva al servidor lo cual pues genera tiempos y pues si leiste mi post sobre <a href="http://www.miguel.click/blog/2015/09/09/disen%CC%83o-web-responsable-parte-1/"><strong>Diseño Web Responsivo y Responsable</strong></a> entonces pues sabrás que mientras más llamadas al servidor peor.</p>
+<p>Por eso la <em>diferencia Sass</em> es que puedes importar varios archivos pero al final todos se exportan y concatenan en un mismo archivo para que en tu markup solo hagas referencia a un solo archivo minimizado.</p>
+<p>Ejemplo:</p>
+<pre><code>// Una manera hermosa de tener tu archivo Sass padre
+@import base
+@import layout
+@import modules
+etc…
+</code></pre>
+<p>De esta manera puedes tener solo los imports en tu archivo padre mientras que en todos los demás tienes fragmentos de código muy específicos que van a simplificarte la vida a la hora de regresar.</p>
+<h3 id="1-base"><a href="#1-base" class="phenomic-HeadingAnchor">#</a>1 Base</h3>
+<p>El primer elemento a considerar en tu Sass con SMACSS es el de la Base, esto quiere decir todo tipo de ajustes universales que haces al documento entero como resets (normalize, reset). En este paso todavía no vemos nada relacionado a IDs o clases por ejemplo:</p>
+<pre><code>@import reset
+*
+    box-sizing: border-box
+body
+    margin: 0px
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+    font-weight: 300
+
+h1
+    font-size: 1.5 em
+
+a
+    color: tomato
+    font-size: 0.8 em
+    &#x26;:hover
+    color: blue
+//etc…
+</code></pre>
+<h3 id="2-layout"><a href="#2-layout" class="phenomic-HeadingAnchor">#</a>2 Layout</h3>
+<p>En la sección de layout vamos a poner todo tipo de situaciones que nos ayuden a acomodar nuestro contenido de manera general ya entrando un poco a nuestras IDs.</p>
+<p>Por ejemplo acá vamos a usar las técnicas para mandar contenido a la derecha, izquiera, centrar texto y demás.</p>
+<pre><code>#container
+    padding: 0.5 em
+
+.centrado
+    text-align: center
+
+.l-left
+    justify-content: flex-start
+
+.l-right
+    justify-content: flex-end
+
+// etc
+</code></pre>
+<figure>![MRW I get this.](https://i1.wp.com/i.imgur.com/Q8Fv0M9.jpg)
+<figcaption>MRW I get this.</figcaption>
+</figure>
+<h3 id="3-modules"><a href="#3-modules" class="phenomic-HeadingAnchor">#</a>3 Modules</h3>
+<p>Acá es donde viene lo sabroso e interesante de todo para entender esto vamos a ver primero un poco de nuestro markdown super obvio en Jade plis. Lo bonito de Jade es que es básicamente Sass pero para HTML entonces se puede usar manera modular y bella igual.</p>
+<pre><code>header#menu
+    ul.nav
+        li.nav--item Inicio
+        li.nav--item-selected Blog
+        li.nav--item Contacto
+        li.nav--item--search
+            input(type=“search”)
+</code></pre>
+<p>Entonces si nos vamos dando cuenta de esta situación hermosa podemos deducir un par de cosas:</p>
+<ul>
+<li>Los IDs solo se usan para nombrar a las secciones mayores</li>
+<li>Las clases nos sirven para describir módulos</li>
+<li>Al entrar en los módulos (ul-> li) podemos saber claramente que la clase de .nav–item es clase hija de .nav. <strong>Osea, es entendible</strong></li>
+<li>Estamos <em>entrando</em> cada vez más usando dos guiones “–“ y estamos pasando opciones con solo uno “-“</li>
+</ul>
+<p>Pero ahora podemos ver como esto funciona de manera mucho más bonita en Sass ya que ahí tenemos una herramienta muy poderosa conocida como “&#x26;”.</p>
+<p>“&#x26;” nos permite <em>llamar</em> todo lo anterior a ella sin tener que escribirlo por ejemplo</p>
+<pre><code>.nav
+    font-size: 1em
+    &#x26;--item
+        color: white
+        &#x26;--search
+            font-size: 1.1em
+        &#x26;-selected
+            color: red
+</code></pre>
+<p>Nos da como resultado</p>
+<pre><code>.nav {
+  font-size: 1em; }
+  .nav--item {
+    color: white; }
+    .nav--item--search {
+      font-size: 1.1em; }
+    .nav--item-selected {
+      color: red; }
+</code></pre>
+<figure>![Lo se, lo se](https://i1.wp.com/i.imgur.com/DWrI2JY.gif)
+<figcaption>Lo se, lo se</figcaption>
+</figure>
+<h3 id="lo-demás"><a href="#lo-dem%C3%A1s" class="phenomic-HeadingAnchor">#</a>Lo demás</h3>
+<p>Aún puedes segmentar mucho más con opciones, utilidades, variables y estados.</p>
+<p>Creo que este artículo apenas empieza a hacer justicia a esta nueva manera de pensar. Realmente apenas leí sobre esto y vi un video al respecto por lo que soy tan nuevo en esto como tu. Si quieres saber más sobre este tema recomiendo las siguientes fuentes.</p>
+<p>Haré un pequeño boilerplate y lo subiré a mi Github así que pendientes 😄</p>
+<p><strong>Video tutorial en inglés</strong></p>
+<p><span class="embed-youtube" style="text-align:center; display: block;"><iframe class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/6co781JgoqQ?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;"></iframe></span></p>
+<p><a href="https://smacss.com/"><strong>SMACSS sitio oficial</strong></a></p>
+]]></description><link>http://mpz.im/posts/usando-smacss-para-vivir-contento/</link><guid isPermaLink="true">http://mpz.im/posts/usando-smacss-para-vivir-contento/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Thu, 24 Sep 2015 14:15:52 GMT</pubDate></item><item><title><![CDATA[5 Extensiones para Google Chrome que Tienes que Instalar]]></title><description><![CDATA[<p>Utilizo <a href="http://www.google.com/chrome/browser/desktop">Google Chrome</a> todos los días tanto para explorar como para trabajar y hacer que sucedan cosas. Por eso tener una serie de extensiones útiles es un <em>MUST</em> para mi. Acá una lista con mis 5 Extensiones Favoritas.</p>
+<h2 id="01-clear-downloads"><a href="#01-clear-downloads" class="phenomic-HeadingAnchor">#</a>01 <a href="https://chrome.google.com/webstore/detail/clear-downloads/bknoejjhcfmakcibhifepfkegpjdnadk">Clear Downloads</a></h2>
+<p>Esta pequeña herramienta hace un trabajo y lo hace muy bien: borra la barra de descargas cada 10 segundos si no tienes una descarga activa. Excesivamente útil si tienes una MacBook Air o similar donde cada pequeño centímentro de pantalla cuenta.</p>
+<h2 id="02-adblock-plus"><a href="#02-adblock-plus" class="phenomic-HeadingAnchor">#</a>02 <a href="https://adblockplus.org/">AdBlock Plus</a></h2>
+<p>A veces olvido mencionar esta extensión ya que para mi es algo tan natural como para los normales es instalar Facebook en su celular nuevo. Básicamente lo que hace esta extensión es quitarte la publicidad de todos lados incluyendo en videos de Youtube y Twitch. Hay quienes se oponen a usarla por motivos morales y demás pero la realidad es que se ahorra pila al mismo tiempo que se navega más rápido por tener esta extensión activa.</p>
+<h2 id="03-hover-cards"><a href="#03-hover-cards" class="phenomic-HeadingAnchor">#</a>03 <a href="http://hovercards.com/">Hover Cards</a></h2>
+<p>Esta extensión es bastante nueva creo que tendrá una o dos semanas de vida como mucho, la conocí en <a href="http://www.producthunt.com/"><strong>Product Hunt</strong></a> mi página de inicio donde encuentro todo lo más nuevo de tecnología <em>SIEMPRE</em>.</p>
+<p>En fin, lo que hace esta extensión es evitar tener que hacer click en todos lados pues con que pases el mouse encima de un link como de Youtube, Instagram, Twitter, Imgur, etc. La realidad es que para esta extensión vale la pena mucho más usarla que platicarla.</p>
+<h2 id="04-panda"><a href="#04-panda" class="phenomic-HeadingAnchor">#</a>04 <a href="http://usepanda.com/">Panda</a></h2>
+<p>Hell yeah mi extensión favorita del momento. Con Panda tus pestañas nuevas se vuelven un centro de comando para recibir toda la información e inspiración para cosas como Front-End Development, Back-End Development, Startups, Tecnología y Geekiness posible en un solo lugar. Muy muy genial nuevamente debes usarla para entenderla.</p>
+<h2 id="05-detox"><a href="#05-detox" class="phenomic-HeadingAnchor">#</a>05 <a href="http://usedetox.com/">Detox</a></h2>
+<p>Si estás harto de entrar a Facebook y no ver otra cosa que videos de Banaz, Wereverwero, videos de abuso animal para denunciarlo o en general noticias tristes instala Detox para refrescar tu mente con Feeds directos de <strong>Panda</strong> pero se ponen en tu timeline de Facebook para leer con mucho flow y comodidad.</p>
+<h2 id="conclusiones"><a href="#conclusiones" class="phenomic-HeadingAnchor">#</a>Conclusiones</h2>
+<p>Espero les haya gustado esta pequeña lista de Extensiones que ocupo en mi día a día aún existen más que uso y muchas más que no conocemos aún pero lo bonito de internet es que la información está ahí esperando que la encuentres si buscas bien.</p>
+<p>Cualquier comentario estaré encantado de leerlo y contestarlo.</p>
+<p><a href="mailto:hola@miguel.click">hola@miguel.click</a></p>
+]]></description><link>http://mpz.im/posts/chrome-extensions/</link><guid isPermaLink="true">http://mpz.im/posts/chrome-extensions/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Tue, 22 Sep 2015 14:00:55 GMT</pubDate></item><item><title><![CDATA[Integrando ToDoIst, IFTTT y Slack - #MiIdeaEs]]></title><description><![CDATA[<p>Pues ayer vinieron personas de Apple al Tec de Monterrey en Puebla a dar varios talleres y conferencias. Primordialmente enfocados a que las personas instalen y usen Apps en general. De nada sirve tener un iPhone 6 Plus de 128 GB si lo vas a usar para Facebook, Whatsapp y Candy Crush.</p>
+<p>Chequen este gráfico donde nos revela que la gente no instala apps nuevas a su celular.<a href="http://qz.com/253618/most-smartphone-users-download-zero-apps-per-month/"><img src="https://i2.wp.com/www.miguel.click/wp-content/uploads/2015/09/Nadiebajanada.png?resize=1026%252C516" title="Gráfico de Quartz"></a></p>
+<p>Quizá instalen las de cajón cuando se lo compran pero hasta ahí queda, por eso esfuerzos por titanes como Apple de educar a las personas en el sentido de que tienen realmente mucho poder en sus bolsillos y deberían ser más curiosos para encontrar soluciones muy buenas a problemas cotidianos. Vaya, la tecnología en general.</p>
+<h2 id="miideaes"><a href="#miideaes" class="phenomic-HeadingAnchor">#</a>#MiIdeaEs</h2>
+<p>Por lo mismo y para incentivar el pensamiento creativo Apple como todo ente misterioso y Omnisciente que es hizo un concurso en Twitter usando el hashtag #MiIdeaEs donde los estudiantes y participantes en general pueden contribuir ideas sobre como usar apps para resolver problemas que puedan surgir en la vida estudiantil. Al no estar limitados por un número de entradas por persona pues decidí publicar varias cosas que efectivamente hago en mi día a día para compartirlas con el mundo esperando ser leído. Uno de esos tuits fue este:</p>
+<p><a href="https://twitter.com/mpalau/status/641320564985098240">https://twitter.com/mpalau/status/641320564985098240</a></p>
+<p>Y pues hasta ahí todo bien continué con mi día normal me fui a dormir y demás cuando hoy desperté con una respuesta muy cool vía Twitter de parte de ToDoIst en si mismo:</p>
+<blockquote>
+<p><a href="https://twitter.com/mpalau">@mpalau</a> es un planazo! ¿Quieres contarnoslo por email Miguel? Puede ser un buen ejemplo para otros usuarios. Escribe a daniel@doist.io 🙂</p>
+<p>— Todoist Español (@todoist_espanol) <a href="https://twitter.com/todoist_espanol/status/641545951518281729">September 9, 2015</a></p>
+</blockquote>
+<p>Así que por eso estoy escribiendo este post para compartir de manera detallada el flujo de trabajo que ocupamos en <a href="http://www.geekybytes.mx/">GeekyBytes</a> en nuestro día a día:</p>
+<h3 id="problema"><a href="#problema" class="phenomic-HeadingAnchor">#</a>Problema</h3>
+<p>Quiero una manera de estar en contacto con todos los miembros de mi equipo y donde todos estemos pendientes de las tareas que hay que cumplir. Nos podamos comunicar asignar tareas y marcar como completadas.</p>
+<p><em>Oh, y que sea inter-sistemas (iOS, Android, Windows, Mac).</em></p>
+<h3 id="requisitos"><a href="#requisitos" class="phenomic-HeadingAnchor">#</a>Requisitos</h3>
+<ul>
+<li><a href="https://es.todoist.com/">ToDoIst</a>: Una app para gestión de tareas y trabajo en equipo. Funciona en todos lados y además está bonita. 👻</li>
+</ul>
+<p><img src="https://i2.wp.com/www.miguel.click/wp-content/uploads/2015/09/TodoIst.png"></p>
+<ul>
+<li><a href="https://ifttt.com/">IFTTT</a>: If This, Then That. App para automatización de tu vida digital. Ej. Si va a llover cambiar mis luces a azul tenue para avisarme.</li>
+</ul>
+<p><img src="https://i1.wp.com/www.miguel.click/wp-content/uploads/2015/09/1_IFTTTEjemplo.png"></p>
+<ul>
+<li><a href="https://slack.com/">Slack</a>: Una combinación entre chat grupal, inbox privado, correo y robots. (Sip, robots)<img src="https://i0.wp.com/www.miguel.click/wp-content/uploads/2015/09/ElRobot.png?resize=744%252C415" title="Amo a El Robot tiene mucha sabiduría."></li>
+<li>Una computadora o un smartphone.</li>
+<li>Actitud de ahorrar tiempo.</li>
+</ul>
+<h3 id="setup"><a href="#setup" class="phenomic-HeadingAnchor">#</a>Setup</h3>
+<ol>
+<li>Crea tus cuentas en cada servicio. En el caso de Slack si no hay equipo créalo tu e invita a los demás miembros.</li>
+<li>En Todoist crea un Proyecto nuevo para ser usado en equipo. No olvides de agregar a los miembros del equipo.</li>
+<li>Ingresa a IFTTT o IF by IFTTT en tu smartphone y activa el canal de TodoIst.</li>
+<li>Regresa al apartado de Canales y activa el canal de Slack.</li>
+<li>Ahora si vamos a unir todo. Entra a la sección de recetas y crea una receta que se active cuando se cree una tarea nueva en el canal de equipo de Todoist y lo que va a hacer es postear en Slack en el chat grupal general (o donde quieras realmente) la tarea que hay que hacer.</li>
+<li>Se feliz y automatiza tu vida!</li>
+</ol>
+<p><img src="https://i2.wp.com/www.miguel.click/wp-content/uploads/2015/09/LaReceta.png?resize=1024%252C709" title="Acá tienen mi plantilla de uso"></p>
+<p>Acá les muestro como se ve mi receta corriendo en la Mac:</p>
+<p><img src="https://i0.wp.com/www.miguel.click/wp-content/uploads/2015/09/Elejemploenuso.png?resize=1112%252C812"></p>
+<h2 id="conclusiones"><a href="#conclusiones" class="phenomic-HeadingAnchor">#</a>Conclusiones</h2>
+<p>Realmente hay muchas cosas que se pueden hacer con la tecnología y eso sin tener que saber programar. Mientras exista la curiosidad seguirán habiendo ideas innovadoras para resolver todo tipo de problemas, incluso los que ni siquiera hemos imaginado aún.</p>
+<p>Espero les haya gustado este post y cualquier comentario con gusto lo contestaré.</p>
+]]></description><link>http://mpz.im/posts/integrando-todoist-ifttt-y-slack/</link><guid isPermaLink="true">http://mpz.im/posts/integrando-todoist-ifttt-y-slack/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Wed, 09 Sep 2015 17:00:44 GMT</pubDate></item><item><title><![CDATA[Diseño Web Responsable Parte 1]]></title><description><![CDATA[<h2 id="una-guía-básica-de-supervivencia-para-el-mundo-digital"><a href="#una-gu%C3%ADa-b%C3%A1sica-de-supervivencia-para-el-mundo-digital" class="phenomic-HeadingAnchor">#</a>Una guía básica de supervivencia para el mundo digital</h2>
+<p>Luego de ya llevar alrededor de un año ganando experiencia en el campo del desarrollo web he ido aprendiendo ciertas cosas que puede que sean muy sútiles pero pueden cambiar de manera muy drástica la experiencia de usuario en una página lo cual puede ser la diferencia entre un visitante que se vuelve cliente o que ve lo que quieres que vea a alguien que simplemente se va.</p>
+<p><img src="http://i2.wp.com/www.miguel.click/wp-content/uploads/2015/09/ABA-hero-13.png?resize=611%252C293" alt="El libro en si mismo" title="El libro en sí mismo"></p>
+<p>Estas “reglas” son algo que Scott Jehl autor del libro <strong><a href="http://abookapart.com/products/responsible-responsive-design">Responsible Responsive Design</a></strong> hace referencia para hablar de prácticas responsables a la hora de desarrollar un sitio web o escribir una entrada en un blog y demás. En pocas palabras debes de pensar y entender que no todo el mundo tiene una Macbook Pro con pantalla retina e internet de 200 Megas o un iPhone 6 Plus con 4G a 40Mb.</p>
+<p><strong>No.</strong></p>
+<p>La realidad es que muchas, muchísimas personas navegan usando celulares de gama media-baja. Usando velocidades 3G o menos. Incluso puede que personas naveguen en su laptop pero conectados a través de su celular a modo de modem (trabalenguas jaja) o de la misma forma quizá estén en su trabajo o casa relajados con el celular pero disfrutando de una velocidad de internet mayor a lo que uno esperaría en un celular normal.</p>
+<p>Si a eso le sumamos la magnitud de aparatos que hay ahora y que salen y salen todo el tiempo pues es necesario estar preparados para lo impensable. En pocas palabras debemos aprovechar hasta el más mínimo kb posible para optimizar nuestros sitios web. Hay algunas prácticas que son sencillas de implementar otras requieren más habilidad pero las iré mencionando todas en orden.</p>
+<h3 id="optimizar-imágenes"><a href="#optimizar-im%C3%A1genes" class="phenomic-HeadingAnchor">#</a>Optimizar Imágenes</h3>
+<p>Este proceso puede hacer una de las diferencias más significativas a la hora de que una persona visite tu sitio web o baje tu app o abra tu mail o lo que sea realmente.</p>
+<p>Tenemos la costumbre por <em>culpa</em> de los celulares y las cámaras de muchos megas de subir fotos directamente del tamaño que salen de nuestro aparato. Y pues esto está bien si las quieres subir a Flickr o si tu sitio se trata de fotos pues va. Pero normalmente eso lo único que va a hacer es subir el tamaño de tu archivo unas 10 o muchas más veces.</p>
+<p>Para lograr eso lo primero que tenemos que hacer es pensar en el tamaño que va a ocupar tu imágen en pixeles en donde la vas a usar y entonces si ajustala a ese tamaño. Podemos hacer eso desde la app más sencilla como Paint en Windows o Vista Previa en Mac.</p>
+<p>Y bueno aunque eso puede llegar a ser suficiente pero pues si ya andas leyendo eso pues vas por Tokyo ¿no?</p>
+<p>El siguiente paso (o pasos) son optimizar las imágenes usando primero una degradación lossy, eso quiere decir que al bajar por ejemplo el número de colores o la saturación de pixeles pues se baja muchísimo el tamaño del archivo aunque también se pierde definición. Por eso se llama <em>Lossy.</em> Esto es lograble tanto con varios programas de edición de fotos pero en mi opinión el Rey Eterno será Photoshop al menos en el corto y mediano plazo. Con su opción de “Guardar para Web” se pueden hacer muchas cosas.</p>
+<p>Debo recordarles que no hay una fórmula escrita para siempre tener buenos resultados pues esto varía dependiendo de cada imágen a la que quieras optimizar. En pocas palabras: <strong>optimizar imágenes para internet es un arte.</strong> Si bien alguna vez jpg hace la chamba otras veces gif será el candidato ideal o también png. Todo depende y es parte de tu deber experimentar hasta encontrar la mejor manera de resolverlo.</p>
+<p>El paso final consiste en darle el tratamiento <em>Lossless.</em> Eso consiste en pasar las imágenes por un último filtro donde se consigue recortarles un último pedazo de tamaño pero sin tener degradación en la calidad de imagen, osea sin perder detalle.</p>
+<p>Mi estandar ideal (algo reciente) es generar imágenes de menos de 50 kb cada una buscando un resultado donde no se pierda tanto detalle.<img src="http://i1.wp.com/www.miguel.click/wp-content/uploads/2015/09/1_swim.jpg?resize=500%252C252" title="Esta foto pesaba 11Mb inicialmente"></p>
+<h3 id="uso-de-svg"><a href="#uso-de-svg" class="phenomic-HeadingAnchor">#</a>Uso de SVG</h3>
+<p>Existe un curioso formato de imágenes que es <a href="http://caniuse.com/#search=svg">soportado por prácticamente todos los navegadores modernos</a> y lo genial que tiene es que estás hablando de vectores y no pixeles. Lo cual es muy muy útil pues con un solo archivo aseguras que tu logo, dibujo, elemento, etc. Se vea delicioso y perfecto en aparatos de cualquier tamaño.</p>
+<p>Estos archivos se pueden usar idéntico a un jpg o gif o lo que sea.</p>
+<pre><code>&#x3C;img class="“logo" src="“logo.svg”" alt="“Nuestro Logo" />
+
+.logo {
+
+background-image: url(‘../img/logo.svg');
+
+}
+</code></pre>
+<p>O incluso se pueden usar así directamente como código fuente en el HTML (ideal para cargar extra rápido y para animar, aunque no tan bueno para guardar en cache).</p>
+<pre><code class="hljs language-html">    <span class="hljs-tag">&#x3C;<span class="hljs-name">svg</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"256px"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"258px"</span> <span class="hljs-attr">viewBox</span>=<span class="hljs-string">"0 0 256 258"</span> <span class="hljs-attr">version</span>=<span class="hljs-string">"1.1"</span> <span class="hljs-attr">xmlns</span>=<span class="hljs-string">"http://www.w3.org/2000/svg"</span> <span class="hljs-attr">xmlns:xlink</span>=<span class="hljs-string">"http://www.w3.org/1999/xlink"</span> <span class="hljs-attr">preserveAspectRatio</span>=<span class="hljs-string">"xMidYMid"</span>></span>
+      <span class="hljs-tag">&#x3C;<span class="hljs-name">g</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"none"</span> <span class="hljs-attr">transform</span>=<span class="hljs-string">"translate(2.000000, 2.000000)"</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">rect</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#DC4E41"</span> <span class="hljs-attr">filter</span>=<span class="hljs-string">"url(#filter-1)"</span> <span class="hljs-attr">x</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">y</span>=<span class="hljs-string">"0"</span> <span class="hljs-attr">width</span>=<span class="hljs-string">"252"</span> <span class="hljs-attr">height</span>=<span class="hljs-string">"252"</span> <span class="hljs-attr">rx</span>=<span class="hljs-string">"7"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">rect</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M100.8,119.7 L100.8,134.82 L125.811,134.82 C124.803,141.309 118.251,153.846 100.8,153.846 C85.743,153.846 73.458,141.372 73.458,126 C73.458,110.628 85.743,98.154 100.8,98.154 C109.368,98.154 115.101,101.808 118.377,104.958 L130.347,93.429 C122.661,86.247 112.707,81.9 100.8,81.9 C76.419,81.9 56.7,101.619 56.7,126 C56.7,150.381 76.419,170.1 100.8,170.1 C126.252,170.1 143.136,152.208 143.136,127.008 C143.136,124.11 142.821,121.905 142.443,119.7 L100.8,119.7 L100.8,119.7 Z"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#FFFFFF"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">path</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M100.8,120.456 L142.443,120.456 C142.884,122.535 143.136,124.74 143.136,127.386 L143.136,126.945 C143.136,124.047 142.821,121.842 142.443,119.637 L100.8,119.637 L100.8,120.456 L100.8,120.456 Z M100.8,82.656 C112.455,82.656 122.283,86.877 129.843,93.807 L130.284,93.366 C122.661,86.247 112.707,81.9 100.8,81.9 C76.419,81.9 56.7,101.619 56.7,126 L56.7,126.378 C56.952,102.249 76.608,82.656 100.8,82.656 L100.8,82.656 Z M100.8,154.602 C118.251,154.602 124.803,142.128 125.811,135.576 L125.622,135.576 C124.236,142.254 117.621,153.783 100.8,153.783 C85.869,153.783 73.71,141.498 73.521,126.378 C73.521,126.504 73.458,126.63 73.458,126.756 C73.458,142.128 85.743,154.602 100.8,154.602 L100.8,154.602 Z"</span> <span class="hljs-attr">opacity</span>=<span class="hljs-string">"0.4"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#FFFFFF"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">path</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M100.8,98.154 C85.743,98.154 73.458,110.628 73.458,126 C73.458,126.126 73.521,126.252 73.521,126.378 C73.71,111.195 85.869,98.973 100.8,98.973 C109.368,98.973 115.101,102.627 118.377,105.777 L130.347,94.248 C130.221,94.122 130.032,93.996 129.906,93.87 L118.377,105.021 C115.101,101.871 109.368,98.154 100.8,98.154 L100.8,98.154 Z M100.8,134.82 L100.8,135.576 L125.622,135.576 C125.685,135.324 125.748,135.009 125.811,134.82 L100.8,134.82 L100.8,134.82 Z"</span> <span class="hljs-attr">opacity</span>=<span class="hljs-string">"0.1"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#3E2723"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">path</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M100.8,170.1 C76.608,170.1 56.952,150.57 56.7,126.378 L56.7,126.756 C56.7,151.137 76.419,170.856 100.8,170.856 C126.252,170.856 143.136,152.964 143.136,127.764 L143.136,127.386 C142.947,152.397 126.126,170.1 100.8,170.1 L100.8,170.1 Z"</span> <span class="hljs-attr">opacity</span>=<span class="hljs-string">"0.1"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#3E2723"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">path</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M195.3,119.7 L182.7,119.7 L182.7,107.1 L170.1,107.1 L170.1,119.7 L157.5,119.7 L157.5,132.3 L170.1,132.3 L170.1,144.9 L182.7,144.9 L182.7,132.3 L195.3,132.3"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#FFFFFF"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">path</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M182.7,119.7 L195.3,119.7 L195.3,120.456 L182.7,120.456 L182.7,119.7 Z M170.1,107.1 L182.7,107.1 L182.7,107.856 L170.1,107.856 L170.1,107.1 Z M157.5,119.7 L170.1,119.7 L170.1,120.456 L157.5,120.456 L157.5,119.7 Z"</span> <span class="hljs-attr">opacity</span>=<span class="hljs-string">"0.4"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#FFFFFF"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">path</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M157.5,132.3 L170.1,132.3 L170.1,133.056 L157.5,133.056 L157.5,132.3 Z M182.7,132.3 L195.3,132.3 L195.3,133.056 L182.7,133.056 L182.7,132.3 Z M170.1,144.9 L182.7,144.9 L182.7,145.656 L170.1,145.656 L170.1,144.9 Z"</span> <span class="hljs-attr">opacity</span>=<span class="hljs-string">"0.1"</span> <span class="hljs-attr">fill</span>=<span class="hljs-string">"#3E2723"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">path</span>></span>
+        <span class="hljs-tag">&#x3C;<span class="hljs-name">path</span> <span class="hljs-attr">d</span>=<span class="hljs-string">"M25.2,25.2 L226.8,25.2 L226.8,226.8 L25.2,226.8 L25.2,25.2 Z"</span>></span><span class="hljs-tag">&#x3C;/<span class="hljs-name">path</span>></span>
+      <span class="hljs-tag">&#x3C;/<span class="hljs-name">g</span>></span>
+    <span class="hljs-tag">&#x3C;/<span class="hljs-name">svg</span>></span></code></pre>
+<h3 id="unificar-archivos-y-minimizarlos"><a href="#unificar-archivos-y-minimizarlos" class="phenomic-HeadingAnchor">#</a>Unificar archivos y minimizarlos</h3>
+<p>Ahora si ya se anda poniendo más sabrosón el tema. Verás cada que haces una referencia a un archivo CSS o JS en tu HTML estás haciendo una petición al servidor (tuyo o externo) y eso toma tiempo en ser contestado, procesado, enviado y recibido. Si tienes muchos archivos lo mejor es combinarlos todos en uno solo de cada tipo para que entonces solo hagas una petición al servidor y todo funcione de manera más hermosa.</p>
+<p>Otra cosa clave es que es muy diferente presentar código para que lo lea otra persona a presentar código para que lo lea una computadora. A las computadoras no les importa que se vea bonito, bien indentado, legible, etc. Para una computadora los espacios vacíos le importan menos de nada pero en el archivo cada caracter es un precioso byte que le estás descontando a tu usuario de sus Megas carísimos que tenemos en México 😭. Por eso es buena práctica minimizar tus archivos ya para cargarlos y usarlos en vivo. Hay muchas maneras de lograr esto desde <a href="http://refresh-sf.com/">sitios web</a>, pasando por <a href="http://gruntjs.com/">tecnología</a> <a href="http://gulpjs.com/">open source</a> a <a href="https://incident57.com/codekit">software de paga</a>. En lo personal uso Codekit porque me permite usar JS modular cosa que normalmente no es posible hacer y pues no tengo que andar pensando tanto en configuraciones y demás. Para mi CSS uso Sass.</p>
+<p><img src="http://i1.wp.com/www.miguel.click/wp-content/uploads/2015/09/Sass.png?resize=540%252C480" alt="Que hermosura" title="Que hermosura"></p>
+<p>Y bueno creo que ya me pasé de lanza en cuanto a palabras así que buscaré seguir este post mañana.</p>
+<p><strong>Cheers!</strong></p>
+]]></description><link>http://mpz.im/posts/diseno-web-responsable-parte-1/</link><guid isPermaLink="true">http://mpz.im/posts/diseno-web-responsable-parte-1/</guid><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Wed, 09 Sep 2015 14:36:08 GMT</pubDate></item><item><title><![CDATA[Convertí mi celular en un ladrillo… y lo regresé a la vida]]></title><description><![CDATA[<p>Acabo de vivir una serie de situaciones de muy alto estrés geek, pero ciertamente han sido de mucho aprendizaje. En pocas palabras mi One sufrió un “Hard Brick” o “Ladrillo Duro” en el sentido de lo que le pasó. Permítanme contarles la historia.</p>
+<h2 id="el-inicio-del-fin"><a href="#el-inicio-del-fin" class="phenomic-HeadingAnchor">#</a>El inicio del fin…</h2>
+<p>Todo comenzó hace 2 días cuando <a href="https://www.youtube.com/user/marquesbrownlee">MKBHD</a> subió un video nuevo a su canal hablando del OnePlus One y Cyanogenmod 12…</p>
+<p><a href="https://www.youtube.com/watch?v=UUBDiUy2824">https://www.youtube.com/watch?v=UUBDiUy2824</a></p>
+<p>Luego de ver el video me entró la emoción y recordé mi experiencia con Lollipop en mi One a finales de Enero. Pero por cuestiones logísticas decidí regresar a KitKat por el tema de la batería y algunos módulos de Xposed.
+Sin embargo, en el vídeo fue mencionado que si instalaba también el Kernel de Franco el rendimiento del celular se volvía on-point lo cual sonó bastante adecuado. Así que claro, instalé CM12 obvio haciendo un backup en TWRP antes.</p>
+<h2 id="las-tristezas"><a href="#las-tristezas" class="phenomic-HeadingAnchor">#</a>Las tristezas</h2>
+<p>Mala fue mi sorpresa al ver que en CM12 mi celular se estaba calentando mucho todo el tiempo y en general mi tiempo de pantalla encendida (SOT) me estaba durando como 4 horas, cosa que antes era 6 o más sin complicaciones.
+Por lo tanto pues como chico listo que hizo su backup decidí regresar a CM11s en un solo click y todo funcionó correctamente… Excepto por una cosa…
+Pude notar que mi logo de inicio al arrancar el celular había vuelto al stock de OnePlus lo cual no me gustó mucho pues a finales de Enero le había flasheado uno personalizado muy minimalista y elegante que incluso compartí en <a href="https://instagram.com/p/yh5l51Lq4T/">Instagram</a></p>
+<p><a href="http://instagram.com/p/yh5l51Lq4T/">http://instagram.com/p/yh5l51Lq4T/</a></p>
+<p>-Pues estuvo super fácil instalarlo, quien sabe por que se quitó pero se lo pongo de nuevo antes de irme a hacer ejercicio y en lo que se reinicia me camino al gym… - pensé de manera inocente.</p>
+<p>Tomé mi One lo conecté por USB a mi Mac, abrí mi Terminal pusé el celular en modo Fastboot y le flashee el nuevo boot logo. Noté algo moderadamente diferente en el modo fastboot de mi celular pero pues equis somos chavos…</p>
+<pre><code>&#x3C;code>./fastboot flash LOGO logo.bin
+&#x3C;/code>
+</code></pre>
+<p>Listo. Ahora solo me queda escribir…</p>
+<pre><code>&#x3C;code>./fastboot reboot
+&#x3C;/code>
+</code></pre>
+<p>-Y listo- pensé…</p>
+<h2 id="la-tensión"><a href="#la-tensi%C3%B3n" class="phenomic-HeadingAnchor">#</a>La tensión</h2>
+<p>-OK, celular ya quedó todo, ya puedes prenderte…
+*Pausa incómoda, la pantalla no prende… :(
+-Creo que ya pasó mucho rato, porque no prende…
+-OK chance y no detectó bien el comando</p>
+<pre><code>&#x3C;code>./fastboot reboot
+
+*No devices attached*
+&#x3C;/code>
+</code></pre>
+<p>-No mamar… ¿¿¿¿qué está pasando???? Bueno vamos a ponerlo en modo recovery y ya restauro otra vez… <em>No pasa nada…</em>
+-Holy fuck!!! Y que tal si lo pongo en fastboot forzado?? Venga! Encendido+Volúmen Arriba… <em>No pasa nada</em>
+-WTF!! Que pasa si dejo apretado el botón de encendido mucho mucho tiempo… <em>Luego de 20 largos segundos el celular emite una débil vibración pero la pantalla no enciende y no pasa nada…</em></p>
+<p>Era como sentir el corazón moribundo de mi celular en mis manos. No podía creer que me estuviera pasando eso, si no había chance de error o si?
+Una rápida búsqueda en xdadevelopers me arrojó la siguiente situación:</p>
+<pre><code>&#x3C;code>Hardware brick
+A hardware bricked OPO has nothing but a black screen (nothing ever comes on the screen, not even a boot logo), it might vibrate when a power button is pressed and held for 20 seconds, has no Recovery partition, no adb mode, and no fastboot partition. The device might be detected in Linux and you might be able to even send commands to it. In Windows, the bricked OPO should be detected as QHSUSB_BULK USB. You might have a bricked OPO as a result of flashing a kernel meant for a different device (or a ROM meant for another device that included a kernel), tinkering with the boot logo or bootloader, or your attempt of unlocking the bootloader resulted in corrupting the boot partition.
+&#x3C;/code>
+</code></pre>
+<p>-No puede ser! En verdad acabo de matar a mi One sniff… Lo conseguí convertí un equipo de última generación maravilla moderna en un sucio pisapapeles de $6,500, wau…</p>
+<p>Pero aún seguía sin entender que había causado que mi celular cayese en ese estado tan deplorable, si nos ponemos a pensar no hice nada que no hubiese hecho en el pasado, ¿o si? me metí a la página de XdaDevelopers nuevamente <a href="http://forum.xda-developers.com/oneplus-one/themes-apps/bootlogo-bootanimation-one-t2886047">justo en el tópico de la animación minimalista</a> y para mi horror leo justo lo que me temía…</p>
+<p><img src="http://cloud.miguel.click/image/3E0936121p2v/Captura%20de%20pantalla%202015-03-02%20a%20las%200.51.20.png" alt="Oh, snap"></p>
+<p>Ahora había aprendido a la mala algo: Aunque había hecho un restore con mi Backup a CM11 parecía ser que el hecho de haber actualizado en un inicio actualizó en si mismo la arquitectura del fastboot. Osea aunque mi One había vuelto a su estado original, su verdadero corazón era ahora CM12 haciendo que lo que le flashee fuese efectivamente lo mismo que tomar una pistola y dispararle a quemarropa…</p>
+<h2 id="piensa-piensa-piensa"><a href="#piensa-piensa-piensa" class="phenomic-HeadingAnchor">#</a>Piensa, piensa, piensa…</h2>
+<p>-OK, estoy en un lío, creo que no me sirve de nada ponerme a llorar. Me relajaré escuchando un poco de música… Ah ya no puedo. Bueno investigo que hacer rápidamente… Chin tampoco puedo. Debo al menos avisar que estoy sin celular… Solo por Telegram, damn. Bueno mejor me apuro…
+Luego de andar pensando un rato se me ocurrió que seguramente este tipo de situaciones aunque son muy precarias, seguro les pasó a algunos otros desarrolladores y por lo mismo algo ha de haber en internet que me ayude a salir de mi precaria situación, por lo que me dirijo primero a los foros de OnePlus para buscar ayuda en el tema de un briqueo duro.
+Luego de unos momentos <a href="https://forums.oneplus.net/threads/solution-how-i-recovered-my-oneplus-one-from-hard-brick.184927/">llegué a un tópico prometedor</a> y decidí leerlo con cuidado.</p>
+<p>Aparentemente existe una última barrera de comunicación entre la computadora y el One que va más allá del fastboot (yo solía creer que esa era ya de a deveras The Last Frontier, pero no), la última barrera se comunica de manera directa con el procesador Qualcomm, es decir literalmente hablándole al corazón o cerebro del celular como lo quieran ver.
+Esto es una herramienta de desarrolladores, y como el celular es chino pues obviamente estaba en chino e integrado al ROM que usan allá llamado Color OS muy distinto al CyanogenMod que tenemos acá.</p>
+<p>Como fuera necesitaba Windows cosa que no tenía pero como si tengo una licencia válida de Windows 8.1 y de Parallels Desktop pues me puse a instalarlos a lo loco en mi iMac. Mientras eso ocurría investigué más y encontré en XDA-Developers <a href="http://forum.xda-developers.com/oneplus-one/general/tool-oneplusrecovery-tool-v1-0-restore-t2991851/">una herramienta</a> que sirve precisamente para automatizar el proceso que leí en los foros de OnePlus incluso en 20% inglés (que es un gran avance contra 0% jaja) eso complementado con <a href="https://www.dropbox.com/s/vgujdut93m341qm/Qualcomm%202012.rar?dl=0">los drivers para que la computadora se conectase al célular.</a></p>
+<p>Pero ahora había otro problema: aunque si detectaba el chip la computadora no podía comunicarse realmente con él pues resulta que Windows 7 para arriba bloquean la instalación de drivers desconocidos cosa que se semi-soluciona con este procedimiento que <a href="http://www.howtogeek.com/167723/how-to-disable-driver-signature-verification-on-64-bit-windows-8.1-so-that-you-can-install-unsigned-drivers/"><strong>enlazo aquí</strong></a>.
+Una vez logrado eso debemos abrir la terminal de Windows (cmd.exe) en modo de Administrador y ejecutar los siguiente 2 comandos en orden y reiniciar la computadora una vez más.</p>
+<pre><code>&#x3C;code>bcdedit.exe -set loadoptions DDISABLE_INTEGRITY_CHECKS
+
+bcdedit.exe -set TESTSIGNING ON
+&#x3C;/code>
+</code></pre>
+<p>Ahora si la herramienta descargada pudo reconocer mi celular y en cuestión de minutos estaba de vuelta con CyanogenMod 11s - 44s. Por lo que instantes después se actualizó a la 05Q y ya ahí procedí a rootear y ya de una vez flashear bien mi logo minimalista.</p>
+<p>En fin, espero les haya gustado la historia. Ahora saben que a menos que se rompa su entrada USB o procesador practicamente siempre se puede rescatar un OnePlus One, oda a los Geeks. No se si se pueda algo así de complejo en un Samsung o cualquier otro Android, ya ni de chiste digo iPhone porque pues no.</p>
+<p>Never Settle.</p>
+]]></description><link>http://mpz.im/posts/celular-ladrillo/</link><guid isPermaLink="true">http://mpz.im/posts/celular-ladrillo/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Mon, 02 Mar 2015 16:15:33 GMT</pubDate></item><item><title><![CDATA[One Second Everyday 2014]]></title><description><![CDATA[<p>Desde que compré mi OnePlus One bajé una app muy buena que se llama <a href="https://play.google.com/store/apps/details?id=co.touchlab.android.onesecondeveryday&#x26;hl=en">1 Second Everyday</a> cuya premisa es muy simple: Graba al menos 1 segundo de tu vida todos los días y al final de un año tendrás 365 segundos de video listos para ser vistos y que recuerdes de manera muy rápida tu vida y sobretodo que te sirva para hacer tu vida valer lo más posible.</p>
+<p>Sumando a eso la memoria del celular de 64GB pues #YOLO a grabar se ha dicho y aunque en su mayoría grabé a Odín mi nuevo perro pues es parte de la vida y espero tener mucho mejores tomas para este 2015.</p>
+<p>Este año tengo varios proyectos en mente:</p>
+<ul>
+<li>
+<p>Mis marcas de mezcal: El Cabildo y Mil Pasiones.</p>
+</li>
+<li>
+<p>Seguir creciendo GeekyBytes</p>
+</li>
+<li>
+<p>Aprender a programar apps para Android y iOS (primero para Android)</p>
+</li>
+<li>
+<p>Una idea nueva de startup web ;)</p>
+</li>
+<li>
+<p>Un canal de Youtube en inglés sobre OnePlus.</p>
+</li>
+<li>
+<p>Videopodcast de Marvel.</p>
+</li>
+</ul>
+<p><a href="http://www.miguel.click/wp-content/uploads/2015/01/SelfieAnimadaPequena1.gif"><img src="http://www.miguel.click/wp-content/uploads/2015/01/SelfieAnimadaPequena1.gif" alt="SelfieAnimadaPequena"></a></p>
+]]></description><link>http://mpz.im/posts/one-second-everyday-2014/</link><guid isPermaLink="true">http://mpz.im/posts/one-second-everyday-2014/</guid><category><![CDATA[Video]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Sun, 04 Jan 2015 06:44:39 GMT</pubDate></item><item><title><![CDATA[Apps Imperdibles para Android [Root Necesario]]]></title><description><![CDATA[<p>Luego del post de ayer decidí complementarlo hoy con una serie de apps que he ido descubriendo ahora que finalmente le hice root a mi OnePlus One. Para los que no sepan hacer root es en Android lo equivalente a hacer jailbreak en iOS. Poniendo la oración anterior en un poco de palabras más mortales a lo que me refiero es que le concedes a ciertas aplicaciones privilegios completos a tu aparato. Por lo mismo esto puede ser algo bueno o malo dependiendo de cómo lo uses pues aunque te da acceso a muchas cosas muy geniales en manos de un usuario no muy hábil puede traer consecuencias negativas que van desde volver el equipo inútil hasta el robo de datos e identidades. Pero bueno como todo en esta vida cuando ganas más libertad también adquieres más responsabilidades. No puedo explicarles como hacer root porque hay tantos métodos y aparatos Android que realmente un solo tutorial no haría nada. Solo recomendaría comprar un Android más orientado al público geek para que sea más sencillo de rootear como los aparatos Nexus o el OnePlus One por poner un par de ejemplos.</p>
+<p><strong>Nuevamente les recuerdo que los títulos son clickeables para bajar las apps correspondientes.</strong></p>
+<h2 id="supersu"><a href="#supersu" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=eu.chainfire.supersu">SuperSU</a></h2>
+<p>Esta app realmente para lo que nos sirve es para gestionar los permisos de las demás apps a las que les otorgas acceso root. Es una manera de estar checando que todo se encuentre en orden y si ves una app a la que no le concediste permiso de super usuario pues se lo puedes quitar así de fácil.
+Existe una versión “pro” de esta app pero sus funciones son realmente muy avanzadas y solo el 5% de todos los usuarios root las aprovecharían. (Y ya de por si eramos un grupo muy pequeño). Por lo que solo enlazo a la gratuita.</p>
+<h2 id="titanium-backup"><a href="#titanium-backup" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=com.keramidas.TitaniumBackup">Titanium Backup</a></h2>
+<p>Con esta app seremos capaces de llevar el respaldo a límites nunca antes vistos. Básicamente puedes hacer un respaldo TOTAL de tu aparato me refiero a apps, datos, fondo de pantalla, registro de llamadas y mensajes, etc etc. Estamos hablando de algo que supera el respaldo de iTunes del iPhone e incluso se puede auto-sincronizar con Dropbox o Box que es como un Dropbox pero de 50GB.
+La ventaja de esto es que si eres un Power User y te gusta andar experimentando con custom ROMs (que son sistemas operativos personalizados) pues puedes llevarte tu información a todos lados incluso si cambias de celular sin ningún problema.
+Como yo tengo un disco duro conectado a mi router Airport Extreme decidí usarlo como respaldo automático entonces tengo programado a Titanium hacer respaldos semanales los domingos a las 2am. Y los lunes igual en la madrugada con una app llamada <a href="https://play.google.com/store/apps/details?id=dk.tacit.android.foldersync.full"><strong>FolderSync</strong></a> lo que hace es sincronizar la carpeta Titanium Backup de mi One con la de mi disco duro de manera inalámbrica y automática… Bang bang! Tranquilidad mental automatizada!</p>
+<h2 id="adaway"><a href="#adaway" class="phenomic-HeadingAnchor">#</a><a href="https://f-droid.org/repository/browse/?fdid=org.adaway">Adaway</a></h2>
+<p>Esta app nos sirve para eliminar toda la publicidad tanto de apps como del explorador. Muy útil pues muchas veces esa publicidad aparte de molesta nos consume datos móviles que en estos tiempos son más valiosos incluso que los minutos de llamadas.
+Obviamente este tipo de apps JAMÁS las vas a encontrar en la Play Store pues Google es una agencia publicitaria disfrazada de empresa tecnológica. Por lo que está app la pueden bajar del enlace que les puse en el título o bien usar <a href="https://f-droid.org/"><strong>F-Droid</strong></a> que es una especie de AppStore pero solo de apps para Root. Algo así como Cydia con la ventaja de que en Android pues hay muchos Cydias :P</p>
+<h2 id="allstream"><a href="#allstream" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=com.kineticgamestudios.airtunes.android">AllStream</a></h2>
+<p>¡Esta sencilla app nos va a permitir usar nuestro aparato Android con nuestras bocinas compatibles con AirPlay! Básicamente nos otorga una nueva habilidad de iPhone pero mejorada pues podemos por ejemplo hacer AirPlay a varias bocinas al mismo tiempo como si de una computadora nos tratásemos. (Con 3GB de Ram el OnePlus One tiene más capacidad que muchas computadoras actuales jaja)</p>
+<h2 id="xposed-installer"><a href="#xposed-installer" class="phenomic-HeadingAnchor">#</a><a href="http://repo.xposed.info/module/de.robv.android.xposed.installer">Xposed Installer</a></h2>
+<p>Empezamos a llegar a las cosas un poco más serias… Xposed Framework nos sirve para hacer modificaciones “suaves” a nível sistema. Esto quiere decir que podemos cambiar la manera de portarse de nuestro celular pero sin realmente borrar o alterar archivos importantes. Por si sola esta app no hace nada pero se complementa con varios módulos que te extienden las habilidades de tu celular como veremos a continuación.
+Elegí solo dos que me cambiaron la vida pero si voy encontrando otros seguro los iré actualizando.
+Sus usos son prácticamente ilimitados ya que bien hay un dicho en la comunidad Android que dice:
+<em>“Hay una app para hacer eso… y si no la hay, hay un módulo para Xposed que seguro lo hace…”</em></p>
+<h2 id="greenify"><a href="#greenify" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=com.oasisfeng.greenify">Greenify</a></h2>
+<p>Esta app es gratuita pero si de verdad quieres desbloquear todo su potencial recomiendo complementarla con <a href="https://play.google.com/store/apps/details?id=com.oasisfeng.greenify.pro">la clave de donación de $26.</a>
+La manera en la que funciona esta app es que se encarga de ir hibernando otras apps para que consuman menos batería y despertándolas de manera inteligente. Tipo como funcionan las apps en iOS para subir tu rendimiento del celular muchísimo. A mi en lo personal pasó a mi celular de acabar con 30% de batería al final del día a un asombroso 60% haciendo exactamente lo mismo pero con el Greenify Activado.</p>
+<h2 id="ram-booster"><a href="#ram-booster" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=com.gejos.android.rambooster">Ram Booster</a></h2>
+<p>Esta sencilla utilidad combinada con Greenify hace el combo perfecto para un dispositvo con rendimiento en modo DIOS. Lo que hace esta app es que gestiona el uso de RAM de tu aparato para mantenerlo siempre en estado óptimo, justo como hace iOS para poder rendir como un Android de 3GB de RAM con 512MB o 1GB.
+Realmente me dio un impacto muy favorable en hacer que mi Android esté siempre al centavo en cuanto a rendimiento y ahorro de batería.</p>
+<h2 id="youtube-adaway"><a href="#youtube-adaway" class="phenomic-HeadingAnchor">#</a><a href="http://repo.xposed.info/module/ma.wanam.youtubeadaway">Youtube Adaway</a></h2>
+<p>Esta app complementa a “Adaway” pero usando el Xposed Framework hace que eliminemos las publicidades de Youtube directamente!
+No más comerciales antes de nuestros videos o “videos patrocinados” de Walmart o así. Es una utilidad muy simple pero altamente funcional.</p>
+]]></description><link>http://mpz.im/posts/apps-imperdibles-para-android-root-necesario/</link><guid isPermaLink="true">http://mpz.im/posts/apps-imperdibles-para-android-root-necesario/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Tue, 25 Nov 2014 21:54:47 GMT</pubDate></item><item><title><![CDATA[8 Apps Imperdibles de Android (No Root)]]></title><description><![CDATA[<p>Ahora llevo poco más de un mes desde que cambié mi iPhone 5 por un OnePlus One y debo decir que en pocas palabras ha valido mucho la pena. Mi mayor preocupación que eran las apps fue cubierta en un 98% donde realmente la única app que extraño sobremanera de mi iPhone es <a href="http://hipstamatic.com/classic/"><strong>Hipstamatic</strong></a> ya que realmente la usaba mucho y aparte de eso había comprado <strong>todos</strong> los lentes y paquetes In-App.
+Sin considerar Hipstamatic también extrañaba <a href="http://realmacsoftware.com/clear"><strong>Clear</strong></a> aunque como verán a continuación creo que encontré algo que lo supera aunque le sigue faltando app nativa para Mac. En fin sin más por el momento vamos de lleno a la lista de mis apps imperdibles para Android en el 2014.</p>
+<p><strong>Recuerden que pueden hacer click en el título de cada app para ir a la Play Store directamente ;)</strong></p>
+<h2 id="press"><a href="#press" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=com.twentyfivesquares.press">Press</a></h2>
+<p>Obviamente no podía iniciar mi lista sin una app que uso múltiples veces en mi día a día. Como saben mis amigos de Facebook y Twitter me encanta estar compartiendo artículos y noticias de negocios y tecnología (muchas más de Tecnología). Esta app viene a ser mi equivalente Android a <a href="http://reederapp.com/ios/"><strong>Reeder</strong></a> pero me encantó descubrir que su poderío es un tanto mayor. Su capacidad de compartir notas se amplía exponencialmente en Android pudiendo compartir directamente a Whatsapp o Telegram. La interfaz está muy cuidada y exquisita. Me encanta la función de deslizar a la derecha o izquiera para cambiar de nota. Su única falla de momento es que no tiene la capacidad de agregar o eliminar suscripciones así que es necesario tener instalado aparte <a href="https://play.google.com/store/apps/details?id=com.devhd.feedly"><strong>Feedly</strong></a> para lograr ese cometido.</p>
+<h2 id="pocket-casts"><a href="#pocket-casts" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=au.com.shiftyjelly.pocketcasts">Pocket Casts</a></h2>
+<p>Una nueva pasión que tengo gracias a mi lectura de Feeds es el escuchar podcasts (gracias Cult of Mac y The Verge) por lo que fue muy agradable encontrar mi cliente favorito de iOS en Android exactamente igual pero con funciones avanzadas como los Widgets en la patalla principal o barra de notificaciones.
+La interfaz es elegante y sus funcionalidades son avanzadas como por ejemplo la capacidad de auto-descargar tus podcasts más recientes y borrarlos en cuanto los terminas de oir son algunas de ellas.
+Sirve para podcasts de video y audio. Si están indecisos sobre este mundo tan bonito e informativo les recomiendo estos podcasts para irse iniciando.</p>
+<ul>
+<li>
+<p><a href="http://hearstartup.com/"><strong>StartUp:</strong></a> Una especie de reality podcast sobre la historia de un hombre creando su empresa… de podcasts. Vive de primera mano la frustración, emoción, inversionistas, burbuja económica y demás emociones que vienen con el emprendimiento tecnológico.</p>
+</li>
+<li>
+<p><a href="https://itunes.apple.com/es/podcast/lst/id660088094?mt=2&#x26;ign-mpt=uo%253D4"><strong>LST:</strong></a> Este podcast es de los chicos de Hipertextual (antes Alt1040) en un espacio de una hora hablan acerca de noticias y tendencias del mundo de la tecnología. Muy padre de escucha y pues está en español.</p>
+</li>
+<li>
+<p><a href="www.npr.org/programs/ted-radio-hour/"><strong>TED Radio Hour:</strong></a> En este show resumen de manera magistral algunas de las mejores pláticas de TED. Normalmente se enfocan en un tema por episodio y del tema sacan tres conferencias relevantes para llegar a una conclusión cultural muy buena.</p>
+</li>
+</ul>
+<h2 id="evernote"><a href="#evernote" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=com.evernote">Evernote</a></h2>
+<p>Como siempre Evernote se cuela y se colará a todas mis listas de Apps imperdibles por su increíble poder de poder servir de outsourcing para mi cerebro. Una idea… Evernote. Pendientes de la casa… Evernote. Asuntos del auto… Evernote. Registro de entrenamientos… Evernote. Mejores artículos leídos… Evernote.
+Básicamente es algo muy increíble que no pueden explicar bien hasta que lo vivan de primera mano.</p>
+<h2 id="scanbot"><a href="#scanbot" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=net.doo.snap">ScanBot</a></h2>
+<p>Este pequeño compañero igual sirve perfecto para llevarme todo tipo de cuestiones de papel al mundo digital. Con un procesador y detector de imágenes sumamente bueno y OCR integrado es mi app de Scanner preferida incluso desde iOS.
+La mejor función que tiene es su capacidad de auto-subir los scans al servicio que elijamos como DropBox o en mi caso Evernote.
+Esta app solo hace una cosa que es escanear pero la hace sumamente bien y está ejecutada de una manera impecable.</p>
+<h2 id="play-music"><a href="#play-music" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=com.google.android.music">Play Music</a></h2>
+<p>Tengo un artículo súper extenso donde hice una comparativa entre Spotify y Rdio pero al final no lo publiqué porque consideré que no hay muchas personas a las que les interese algo así y porque también finalmente terminé optando por la propia versión de Google en el asunto.
+Básicamente con tus suscripción de $99 mensuales obtienes Spotify, Rdio y iTunes Match en un solo paquete.
+Puedes streamear y bajar offline música infinita en todos tus aparatos. Puedes escuchar canciones similares y finalmente puedes cargar tu propia música hasta 20GB a los servidores de Google para oirla en streaming. Toda una joyita de servicio sub-utilizado.
+Por cierto lo de los 20GB de música cargada sirve incluso sin tener la suscripción premium. Así que a todos mis amigos propietarios de Android les digo: ¿Porqué no?</p>
+<h2 id="fenix-for-twitter"><a href="#fenix-for-twitter" class="phenomic-HeadingAnchor">#</a><a href="https://play.google.com/store/apps/details?id=it.mvilla.android.fenix">Fenix for Twitter</a></h2>
+<p>Esta app es esencialmente el equivalente a <a href="http://tapbots.com/software/tweetbot/"><strong>Tweetbot</strong></a> para Android entonces no hay mucho que decir. Simplemente no me gusta Twitter de vainilla. Me gusta la manera en la que está ejecutado este cliente. La manera en la que lo ocupo es que tengo guardada una búsqueda que dice “Oaxaca Bloqueo” y cada día antes de salir de mi casa la corro para ver como está la situación vehicular en el Estado para pensar rutas alternas y demás…</p>
+<h2 id="popcorn-time"><a href="#popcorn-time" class="phenomic-HeadingAnchor">#</a><a href="http://www.popcorn-time.se/">Popcorn Time</a></h2>
+<p>Esta última app no se encuentra en la Play Store por que se encuentra más bien en un terreno gris y pues para empresas como Google supone un conflicto de intereses tener algo así en su tienda de apps. Por suerte tenemos de nuestro lado la apertura de Android y su capacidad de agregar apps de otros lados.
+Básicamente estamos hablando de Netflix gratis, ilimitado, super HD y ultra actualizado. No diré más allá de <strong>MUST HAVE.</strong></p>
+]]></description><link>http://mpz.im/posts/8-apps-imperdibles-de-android-no-root/</link><guid isPermaLink="true">http://mpz.im/posts/8-apps-imperdibles-de-android-no-root/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Mon, 24 Nov 2014 15:48:24 GMT</pubDate></item><item><title><![CDATA[A Una Semana con el OnePlus One]]></title><description><![CDATA[<p>Al momento de escribir esto cumplo una semana con el OnePlus One y quisiera compartir un poco mis primeras impresiones del equipo. Sin embargo me gustaría antes compartir la historia de como fue que llegué en primer lugar al celular tan solo un día después de haber escrito el post anterior…
+Resulta que justo cuando escribí el último párrafo del texto busqué precios en MercadoLibre para poder ponerlo en contexto y de hecho hubo algo que escribí mal en su momento que fue que los precios que puse de MercadoLibre eran en realidad del modelo básico de 16GB y el de 64 incrementaba su precio en $1,000.
+Lo otro que ocurrió al mismo tiempo fue que OnePlus anunciaba que iba a quitar el sistema de invitaciones de compra para el día 27 de Octubre (ayer) lo que basicamente implicaba que cualquier persona iba a poder comprar el celular directo de la fábrica a un precio de aproximádamente $5,500 ya con el envío.
+Y la pieza final era que por algún motivo encontré una publicación de ML que vendía un OnePlus One en OAXACA! ¿Cuántas probabilidades había de todo eso? Obviamente lo estaba vendiendo a un precio elevado de $8,000 por lo que decidí ofrecerle $6,500 a lo que respondió que le ofertara para ponernos de acuerdo.
+Wu-huu entonces esperé un día más tomé mi dinero y partí al negocio del jóven que me mostró su equipo lleno de apps gratuitas y sin cambios en el tema o estructura visual. Le pregunté como es que alguien de Oaxaca tenía ese celular y aparte de todo tenía otros 2 para vender.
+Me dijo que llevaba desde Julio en los foros oficiales de OnePlus posteando y demás cuando un día le llegó su invitación y pudo comprar su equipo. Luego de que le llegó pasaron como 2 semanas y le dieron de la misma forma otras 3 invitaciones que ocupó el mismo para traer los otros celulares y acá estabamos entonces.
+Llegó el momento de la negociación: Mi oferta era la misma $6,500.
+Su argumento: Ya me van a comprar el equipo en $7,500 a paguitos unos estudiantes de LaSalle.
+Mi contra-argumento: El próximo lunes cualquiera podrá comprar el equipo en $5,500 te estoy pagando $1,000 de utilidad y el dinero vale más hoy que mañana y mucho más si es todo junto en vez de en paguitos y ponte a cobrar y demás…
+DEAL!
+En muy pocas palabras este celular es el verdadero Flagship Killer, es lo más parecido a una Mac en sus años iniciales o diría que hasta el 2012.
+"Never Settle"</p>
+]]></description><link>http://mpz.im/posts/a-una-semana-con-el-oneplus-one/</link><guid isPermaLink="true">http://mpz.im/posts/a-una-semana-con-el-oneplus-one/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Tue, 28 Oct 2014 22:31:58 GMT</pubDate></item><item><title><![CDATA[OnePlus One - Una esperanza en el mundo Android?]]></title><description><![CDATA[<p>Luego de mi fallido intento por comprar un Samsung Galaxy Note 4 por cuestiones de trolleo corporativo por parte de Samsung decidí de mientras esperar para adquirir mi siguiente celular. Volvía al cuadro uno: la decisión seguía siendo entonces o un Note 4 o un iPhone 6 Plus, pero como les he venido diciendo la apuesta Apple al mundo phablet no me termina de convencer y me llama mucho la atención la manera en que Samsung se muestra a resolver esa situación.</p>
+<h2 id="los-grandes-defectos-de-android"><a href="#los-grandes-defectos-de-android" class="phenomic-HeadingAnchor">#</a>Los grandes defectos de Android</h2>
+<p>Definitivamente uno de los defectos más grandes de los celulares Android es que como usuario no obtienes las actualizaciones de sistema operativo a la misma velocidad que en iOS que generalmente es al instante y por al menos 3 o 4 años desde que sale el aparato. En Android históricamente se hablaba de que el celular que comprabas se quedaba con ese sistema operativo pues de por vida pues hablar incluso de 6 meses de soporte luego de la salida del aparato era ya exagerar. Por suerte mediados de 2013 a la fecha eso empieza a cambiar y poco a poco los fabricantes de Android le van dando más soporte y vida a los celulares, pero sigue muy distante de ofrecer lo mismo que en iOS.
+Técnicamente la única forma de tener algo similar a iOS en cuanto a integración software, hardware y actualizaciones es hablar de la línea Nexus, pero generalmente han sido celulares muy feos y con especificaciones de gama media. Nuevamente eso está por cambiar con el nuevo Nexus de Motorola pero aún faltan un par de meses para verlo como una realidad.
+E incluso al hablar de una experiencia ‘vanilla android’ hay una cosa que al menos en un 90% de las veces me han dicho mis amigos Androideros: <strong>rootea tu celular.</strong></p>
+<h2 id="rootear-tu-android"><a href="#rootear-tu-android" class="phenomic-HeadingAnchor">#</a>Rootear tu Android</h2>
+<p>Así es, el consejo más dado por todos mis contactos Android es rootear tu celular y aunque la respuesta más conocida que me dan es: “para tener más libertad y accesos”. Aún no he escuchado un ejemplo concreto más allá del de un amigo que trabaja mucho con celulares y ocupa el rooteo para por ejemplo liberar el 4G en equipos que no lo permiten, desbloquearlos, etc.
+Para el usuario promedio rootear tu celular traer más problemas de los que promete resolver por unas cuantas cuestiones:</p>
+<ul>
+<li>
+<p>En algunos casos anula la garantía de tu equipo (Samsung es el ejemplo que tengo a la mano).</p>
+</li>
+<li>
+<p>Crea problemas de comunicación entre el software y hardware de tu celular. ¿Recuerdas tu cámara de 4K? Pues ya no más. ¿Enfoque con láser? Sorry ¿S Pen? ¿De que me hablas?</p>
+</li>
+<li>
+<p>La personalización que le importa al 99% de los usuarios ya se puede lograr en Android con launchers y temas.</p>
+</li>
+<li>
+<p>Definitivamente no es para un usuario promedio, sobretodo cuando tienes acceso total a tu aparato pues se abren las puertas a apps que por ejemplo graben todo lo que escribes sin que te des cuenta ni las puedas borrar o cosas así. Empieza a sonar tan Windows que va dando miedo y flojera al mismo tiempo.</p>
+</li>
+</ul>
+<h2 id="conoce-al-oneplus-one-el-celular-geek-definitivo"><a href="#conoce-al-oneplus-one-el-celular-geek-definitivo" class="phenomic-HeadingAnchor">#</a>Conoce al OnePlus One: El celular geek definitivo.</h2>
+<p>Poniendo todos esos puntos sobre la mesa quiero entonces pasar a mostrarles este celular que se ve excesivamente prometedor en todo aspecto posible que ccontrarresta todos los puntos negativos que expuse anteriormente. Puedes leer más del celular <a href="http://oneplus.net/one"><strong>en su sitio oficial.</strong></a> Pero tiene básicamente el mismo poder que un Galaxy Note 3 un poquito menos en todos los rubros pero su precio ya desbloqueado es de $350 USD por el modelo de 64GB algo completamente fuera de serie. Puedo comprarme 2 de estos por lo de 1 Note 4. Vale incluso menos que un Note 3.
+Otro de los puntos interesantes de este celular es que viene rooteado de fábrica. Es decir, el software y hardware ya vienen integrados para funcionar bien con el rooteo, podrás grabar en 4K si quieres o tomar fotos de 13MP sin sudar ni tantito.
+Y claro como viene rooteado e integrado en todo el aparato puedes hacer basicamente lo que se te de la gana con el celular desde decidir si quieres usar botones "capacitivos" o virtuales, cambiar las animaciones de inicio, fuentes, etc. Y viene integrado con una tienda de temas para que tunear tu aparato sea algo tan fácil o complicado como lo quieras.
+En cuanto al tema de los updates al ser un proyecto open source pues generalmente estamos hablando de ventanas de tiempo inferiores a 90 días después de cada lanzamiento por parte de Google para estar al día.</p>
+<h2 id="conclusión"><a href="#conclusi%C3%B3n" class="phenomic-HeadingAnchor">#</a>Conclusión</h2>
+<p>Aparentemente este es el celular Android definitivo amo de los demás pero su suerte es incierta dado que solo es conocido en selectos grupos de usuarios Android y aunque la demanda es muy alta para el aparato sigue sin ser conocido por el público general y ciertamente tu estilo del máximo open source sin bloatware seguro hará que Telcel y amigos no lo quieran traer de manera oficial al país. Pero bueno siempre existirá Mercadolibre donde puedes comprar uno por $6,500 ;) o si esperas al 6 días a partir de hoy lo podrás comprar directamente desde China a $350 USD más envío que no suena nada, nada mal (como $5,500).</p>
+]]></description><link>http://mpz.im/posts/oneplus-one-una-esperanza-en-el-mundo-android/</link><guid isPermaLink="true">http://mpz.im/posts/oneplus-one-una-esperanza-en-el-mundo-android/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Mon, 20 Oct 2014 16:09:45 GMT</pubDate></item><item><title><![CDATA[Se complica Android sin siquiera haber empezado]]></title><description><![CDATA[<h2 id="samsung-nos-trollea"><a href="#samsung-nos-trollea" class="phenomic-HeadingAnchor">#</a>Samsung nos trollea</h2>
+<p>Recuerdan la bella historia que escribí el domingo acerca de que me había pedido un Galaxy Note 4 y demás historias, pues justo a tiempo descubrí una gran farsa que existe en el mundo Samsung y quiero compartirla con todos: <strong>estoy hablando de la cuestión de los procesadores en los celulares Samsung</strong>.
+Para los que no lo sepan (que estoy seguro son muchísimos pues entre esos me encontraba yo hasta hace 2 días) Samsung lanza dos modelos de sus flagships al mundo. Uno pensado para el mercado asiático y otro pensado para Estados Unidos. Suena bien y hasta dentro de lo que cabe suena lógico. (Lo que viene es un poquito técnico pero tengan paciencia). En el caso de Estados Unidos estamos hablando de un procesador SnapDragon 805 de cuatro núcleos y en el caso asiático un procesador Exynos de 8 núcleos.
+Uno se pondría a pensar que el de ocho núcleos es el mejor, ¿no? Después de todo estamos hablando de Samsung y de Android: The bigger, the better, right?
+Pues aparentemente no, resulta que el procesador de cuatro núcleos es el que está hecho para funcionar con las redes 4G LTE de Estados Unidos y México como buen hermanito menor pues usa las mismas bandas y capacidades en ese sentido. Con el procesador de ocho núcleos simplemente tu celular va a jalar solo con 3G y ya aunque tengas un plan de capacidades superiores.
+Acá es donde se va poniendo más turbia la situación: <strong>la única manera de tener acceso a los equipos con 4G es si los compras con los ‘carriers’ autorizados, es decir Telcel, Movistar, etc</strong> Y si quieres comprar un celular Samsung desbloqueado, mala suerte olvídate de tener 4G.
+Obviamente Samsung al ser una compañía tan grande vive como Microsoft en gran medida de los tratos B2B que negocia con los proveedores de telefonía celular de cada país.
+“Tu atáscales a todos los weyes con amigo o similar mercado low-cost mi celular Samsung para vender en alto volumen y yo cambio de doy el flagship solo para tus clientes que consigas en plan o incluso si lo quieren sin plan te dejo que llenes mi flagship con tu animación al prenderlo y con software que no se puede borrar.” Y Telcel por supuesto que le entra.
+Si siguieron la pista de lo que ocurrió en esa negociación nosotros los usuarios finales fuimos delegados al último lugar pues perdemos la opción de comprar un flagship liberado para poder usar 1 o 2 años y luego vender como se nos de la gana ya que si se adquiere un celular liberado fuera de las compañías celulares entonces pues pierdes un detalle básico como es el internet móvil.
+Lo peor es que hay personas que saben de esto y se aprovechan confundiendo a la gente. En MercadoLibre hay varios importadores de celulares que consiguen los flagships Samsung y los anuncian en el título de la publicación como quad-core (esperanza inicial) pero en la descripción ponen octa-core (cruda realidad, confusión segura) y hasta que les preguntas confirman que es octa-core. Creo que eso puede explicar porque uno de mis amigos que se compró el S4 liberado nunca tuvo 4G en Puebla y yo que me compré el iPhone 5 liberado en Estados Unidos si tuve 4G en Puebla en cuanto se pudo tener sin tener que hacer nada especial al respecto (que es algo que como usuario esperas o ni siquiera piensas ni tienes porque pensar).</p>
+<h2 id="tldr"><a href="#tldr" class="phenomic-HeadingAnchor">#</a>TL;DR</h2>
+<p>Samsung solo vende los verdaderos flagships si los compras directamente a los proveedores celulares (Telcel) si los quieres comprar liberados te vende celulares limitados asiáticos. Acabas teniendo un flagship con crapware o un flagship sin todas sus habilidades. Cuidado con comprar celulares Android liberados por MercadoLibre.
+De mientras ya cancelé mi pedido celular y ahora a esperar a que llegue a Telcel y luego a Oaxaca para entonces poder tener un celular que sirva bien.
+Extraño el iPhone y eso que aún sigo teniendo mi iPhone…</p>
+]]></description><link>http://mpz.im/posts/se-complica-android-sin-siquiera-haber-empezado/</link><guid isPermaLink="true">http://mpz.im/posts/se-complica-android-sin-siquiera-haber-empezado/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Fri, 17 Oct 2014 15:01:32 GMT</pubDate></item><item><title><![CDATA[Mi nueva aventura con Android]]></title><description><![CDATA[<h2 id="y-al-final-ocurrió"><a href="#y-al-final-ocurri%C3%B3" class="phenomic-HeadingAnchor">#</a>Y al final, ocurrió</h2>
+<p>He sido un usuario fiel al iPhone desde el 2007 cuando cambié mi Sony Xperia Walkman o algo así, que su punto fuerte de ventas era que traía una hermosas bocinas portátiles, por un iPhone original. Todavía recuerdo que fue cuando fui con un amigo y mis papás a Monterrey a conocer el Tec y en general el campus con sus venados, estadio inmenso y todas esas cosas bonitas. Lo verdaderamente cool fue cuando cruzamos a Laredo en carro y ahí en un local turbio persa o árabe (más probablemente persa) compramos un iPhone para cada quien a un precio grotesco pues en ese entonces no existían los iPhones liberados. Luego de como 20 minutos con cada dispositivo nos entregaron nuestros equipos liberados. Recuerdo que ese mismo día en el hotel ya de vuelta en Nuevo León me desvelé como hasta las 4am haciéndole el Jailbreak a mi equipo, una cuestión que no era para nada como lo que es ahora de fácil y rápido.
+Luego vino el iPhone 3G y 3Gs que se me hicieron horribles en cuanto a diseño y por lo que decidí saltarlos. En el 2010 me decidí por el iPhone 4 está vez en modo de plan regular con Telcel y ha sido uno de los celulares más sólidos que he tenido hasta la fecha.
+Como olvidar el fatídico 2012 en Nueva York cuando gasté TODOS mis ahorros frutos de mi trabajo en Kalenji Shop y de mis trabajos de video anuarios en un iPhone 5 desbloqueado comprado literalmente 3 días después de su lanzamiento oficial en Estados Unidos. Luego de vivir una emoción tan fuerte como esa creo que el hype de comprar un celular nuevo ha muerto por siempre.
+Sin embargo en 2013 empezó a ocurrir algo interesante: los celulares Android empezaron a echarle muchas más ganas y pasaron de ser celulares chafas a reemplazos decentes con el Galaxy S4 y poco a poco a base de pura fuerza bruta (pantallas doble o triple retina, memoría RAM, procesador y megapixeles en cantidades asquerosas) comenzaron a realmente funcionar de manera óptima que incluso dos de mis amigos más Apple y tecnológicos decidieron cambiar de bando con terminales Galaxy S3 y S4 (el del S3 ahora ya cambió a un HTC One M8 y el del S4 regreso a iOS con un iPhone 5s).
+E incluso con todas esas situaciones nunca vi como una opción débil a mi confiable iPhone 5 hasta ahora…</p>
+<h2 id="llega-el-iphone-6-plus"><a href="#llega-el-iphone-6-plus" class="phenomic-HeadingAnchor">#</a>Llega el iPhone 6 Plus</h2>
+<p>Hace un poco más de un mes Apple anunció sus nuevos flagships: iPhone 6 y iPhone 6 Plus. Definitivamente me emocionó más el iPhone 6 Plus pero luego de un análisis que hice acá mismo en el blog llegué a la conclusión de que el tiempo adecuado para que Apple esté al cien porciento metido en el mercado phablet será <em>al menos</em> hasta el siguiente año que pueda pulir todos los detalles de su iOS 8 y sobretodo que los desarrolladores hayan adaptado sus apps a los nuevos displays.</p>
+<h2 id="el-momento-de-vender"><a href="#el-momento-de-vender" class="phenomic-HeadingAnchor">#</a>El momento de vender</h2>
+<p>Basicamente desde inicios de este año apalabré con mi novia la venta de mi actual iPhone 5 a un precio altamente descontado por causa y efecto del amor. Y todo había sido solo plática hasta que escribí mi artículo anterior sobre el iPhone 6, pues ese fin de semana Susy comenzó a abonar a mi cuenta en cómodas parcialidades para que llegado el momento simplemente le entregase el terminal y yo siguiese mi camino con mi <em>en teoría</em> iPhone 5S.
+Sin embargo, algo más ocurrió en ese intervalo de tiempo: Samsung anunció su celular Galaxy Note 4. Y pues como lector ávido de noticias de tecnología me empapé de conocimiento respecto al tema. Me llamó increiblemente la atención algunos puntos como el hecho de que el stylus incluído ahora tiene el doble de sensibilidad y como notan algunos es lo más cercano actualmente a realmente escribir en pluma pero de manera digital.</p>
+<h2 id="meet-galaxy-note-3"><a href="#meet-galaxy-note-3" class="phenomic-HeadingAnchor">#</a>Meet Galaxy Note 3</h2>
+<p>Este fin de semana vine a Puebla a pasar mi estadía en casa de Susy con su familia. Fue entonces cuando el viernes en la noche su mamá llegó con un nuevo Galaxy Note 3 y me pidió ayuda para configurarlo. Me encantó el display y la capacidad de tener Widgets en la pantalla principal pues aunqué ya lo había vivido con el Galaxy S3 Mini la experiencia fue más aterradora que gratificante y en esta ocasión fue bastante más agradable sin embargo siguen algunas cosas que no me terminaron de convencer.
+Me encantó la idea de la plumita y tomar notas con ella pero efectivamente no se siente tan preciso o correcto, por lo que me llamó más la atención el Note 4.
+Si a eso le sumamos que el otro fin Susy me va a terminar de pagar mi celular pues entonces me entraron mucho más los nervios y responsabilidad de entregárselo de manera puntual. Acá la situación fue que luego de pasar el fin de semana con el Note 3 me di cuenta de que ese tamaño de pantalla es perfecto para mí. Pero en base a mi análisis pasado no quería un iPhone 6 Plus sino algo más serio y definido.</p>
+<h2 id="la-realidad"><a href="#la-realidad" class="phenomic-HeadingAnchor">#</a>La realidad</h2>
+<p>Samsung inventó las phablets y iPhone simplemente copió (al menos en esta versión de iPhone) por lo tanto estamos hablando de que el Galaxy Note 4 es el terminal phablet perfeccionado o visto en términos Apple es el Galaxy Note 3s. Mientras que el iPhone es el 6 y ya con todo lo que representa.
+Por eso mismo junto con el precio (que realmente no es taaanta la diferencia con un iPhone pues me costó $13,700 ya con el envío incluido) opté por mandar pedir el Galaxy Note 4 de Amazon con fecha tentativa de llegada el jueves de la siguiente semana. Y de la misma forma la disponibilidad fue clave, simplemente ya hay Note 4 para comprar a tarifas decentes mientras que iPhone pues pensar en un Early 2015 sigue siendo una idea loca en el mercado mexicano.</p>
+<h2 id="que-esperar"><a href="#que-esperar" class="phenomic-HeadingAnchor">#</a>Que esperar</h2>
+<p>Realmente no tengo idea de que esperar de un terminal Android de gama alta o flagship sin embargo lo que quiero no esperar es tener dolores de cabeza y que todo funcione de manera correcta.
+Encuentro muy difícil de encontrar actualmente vía videos de youtube recomendaciones de apps y launchers que sean hermosos. Parece que la comunidad Android son en general personas con un nivel geek tan pesado que la belleza no es algo esencial para su manera de funcionar día a día.
+Por lo mismo estoy recurriendo a mis amigos pre-iOS que tienen o tuvieron Android para orientarme en el camino correcto. De cualquier forma cuando esté más adentrado en el conocimiento Android les prometo que escribiré guías adecuadas para ayudar a la gente que tiene estos terminales a sacarles el mejor provecho de la manera más elegante y funcional posible.
+<strong>Que Dios se apiade de mi alma…</strong></p>
+]]></description><link>http://mpz.im/posts/mi-nueva-aventura-con-android/</link><guid isPermaLink="true">http://mpz.im/posts/mi-nueva-aventura-con-android/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Mon, 13 Oct 2014 15:12:23 GMT</pubDate></item><item><title><![CDATA[Las mejores Apps para Mac]]></title><description><![CDATA[<p>Recientemente vendí mi fiel MacBook Pro 2011 basicamente porque quería una lap más ligera y con una batería suprema para poder usarla más al ir a visitar clientes y demás situaciones sumado con la situación de que cuando edito videos lo hago en mi iMac pues entonces mi opción era una MacBook Air 2013 o más nueva. Basicamente porque a partir del 2013 tuvieron ese boost de procesador Haswell que incidió en una batería con una duración casi insana de 9 horas seguidas de uso casual/intensivo (checar mails, explorar internet, programar y escribir) que bueno es lo que el 95% de la población humana normal hace.
+En fin, la logré vender hace como 2 semanas en 2 pagos y ayer por fin me la terminaron de pagar y por lo tanto me compré la MacBook Air y ahora que estoy instalándole todo les quiero compartir mi lista personal de apps indispensables para una nueva Mac para sacarle mucho más provecho.
+Sin más preambulo empecemos de lleno con el listado:</p>
+<h2 id="evernote"><a href="#evernote" class="phenomic-HeadingAnchor">#</a><a href="https://itunes.apple.com/mx/app/evernote/id406056744?mt=12">Evernote</a></h2>
+<p>Evernote es sin duda una app <strong>imprescindible</strong> para Mac y obviamente también para iPhone, iPad y Android. Si pudiera resumir de manera simple Evernote diría que es hacer Outsourcing de tu cerebro. Cualquier nota, foto, memoria, pagina web, archivo, etc que se te ocurra puedes ponerlo ahí categorizarlo y accederlo desde cualquier dispositivo que tengas con Evernote.
+Combinalo con su <a href="http://evernote.com/intl/es-latam/webclipper/"><strong>extensión para el navegador</strong></a> y tienes una aplicación ganadora. Olvidé decirles su precio: GRATIS. Evernote usa el modelo Freemium de servicio ofreciendo mejores funcionalidades a usuarios premium como notas offline, protección con contraseña y TouchID en el iPhone. Pero sus atributos básicos son los mismos en la versión gratis y en la de paga.</p>
+<h2 id="1password"><a href="#1password" class="phenomic-HeadingAnchor">#</a><a href="https://itunes.apple.com/mx/app/1password/id443987910?mt=12">1Password</a></h2>
+<p>Si Evernote es el outsourcing de tu cerebro 1Password es el outsourcing de tus contraseñas. Es un programa que crea un archivo super cifrado que solo se puede abrir con tu contraseña (creo que el nombre nos lo indicaba) de tal forma que puedas tener en un solo lugar seguro y centralizado todas tus contraseñas. Obviamente sincronizado a todos tus dispositivos ya sea con iCloud o con Dropbox. Si a eso le sumas que cuenta con extensiones para tus navegadores para que de esa forma una vez que desbloqueas la app esta puede rellenar tus contraseñas en todos los sitios que tengas guardados ahí.
+Otra función muy buena que tiene es que puede incluso sugerirte contraseñas seguras para que cambies tu típico “1234567890” para entrar a Facebook por algo como “jyxhRNNXpgHQ9fioqwHbcJwt4xgoYRCuTjxinHvNokVTzqWdcc” ya sabes seguridad y así.</p>
+<h2 id="airmail"><a href="#airmail" class="phenomic-HeadingAnchor">#</a><a href="https://itunes.apple.com/mx/app/airmail/id573171375?mt=12">Airmail</a></h2>
+<p>Hay que admitirlo: La app básica de mail de OSX es <strong>horrible</strong> por suerte esta alternativa de $26 está ahí para nosotros. Airmail es simplemente demasiado poderosa como para describirla toda, pero a la vez puede ser tan sencilla que los nuevos usuarios la podrán usar de inmediato. Funciona perfectamente con Gmail y su función de archivado. Puedes tener muchas cuentas. Personalizar tu tipografía, añadir HTML o Markdown tanto en el cuerpo como en tu firma y muchas cosas más que ni siquiera he podido poder usar a la perfección todavía.
+Me hubiera gustado ver sincronía iCloud para no tener que configurar mis mails de manera manual nuevamente, pero bueno es un precio pequeño a pagar por todo lo demás que tiene que realmente está muy cool.</p>
+<h2 id="reeder"><a href="#reeder" class="phenomic-HeadingAnchor">#</a><a href="https://itunes.apple.com/mx/app/reeder-2/id880001334?mt=12">Reeder</a></h2>
+<p>Si te encanta estar informado de muchos lados rápido todo el tiempo como yo deberías probar Reeder 2. Es un lector de Feeds que funciona con Feedly (que es donde exporté mis feeds originales de Google Reader :( ) Pero bueno Reeder es una App indispensable en mi día a día ya sea en el iPhone o iPad o acá. Cuenta con vinculación altamente integrada con muchos muchos servicios como Evernote, Facebook, Twitter, Instapaper, Read Later e incluso la lista de lectura que viene por default en Safari de Mac y iOS.</p>
+<h2 id="clear"><a href="#clear" class="phenomic-HeadingAnchor">#</a><a href="https://itunes.apple.com/mx/app/clear-tasks-reminders-to-do/id504544917?mt=12">Clear</a></h2>
+<p>La mejor app para gestionar tus tareas pendientes y cosas por el estilo. Como siempre me gustan las apps que se sincronizan con mi iPhone/iPad y Clear no es para nada la excepción. Su interfaz es sumamente minimalista, puedes manejarla con gestos del trackpad o del mouse y sus sonidos son altamente satisfactorios cada que completas una tarea o tareas. Esta app junto con Evernote son el 70% de mis herramientas de productividad diaria.</p>
+<h2 id="cleanmymac-2"><a href="#cleanmymac-2" class="phenomic-HeadingAnchor">#</a><a href="http://macpaw.com/cleanmymac">CleanMyMac 2</a></h2>
+<p>Ahora más que nunca con la MacBook Air necesito optimizar mi espacio de disco y memoria. Para eso tengo a CleanMyMac que se encarga precisamente de esa situación. Con una interfaz hermosa se encarga de encontrar archivos de sistema no usados, archivos de idiomas random que no sean los que usas, memorías en cache, archivos de librerías, archivos grandes, basura y muchas otras cosas más que tu Mac va acumulando sin que te des cuenta para liberarte de mucho espacio sin nada de complicaciones ni problemas de rendimiento.</p>
+<h2 id="telegram-messenger"><a href="#telegram-messenger" class="phenomic-HeadingAnchor">#</a><a href="https://itunes.apple.com/mx/app/telegram/id747648890?mt=12">Telegram Messenger</a></h2>
+<p>Oso que ocupes WhatsApp teniendo opciones tan padres y funcionales como Telegram Messenger. Esta app nace luego de tantas veces que WhatsApp fue exhibida como una plataforma altamente insegura y peor aún una donde a sus creadores y responsables les importa menos que nada arreglar dichas situaciones. Por eso un par de amigos soviéticos billonarios decidieron crear esta plataforma de código abierto altamente cifrada para proteger la seguridad de las conversaciones que ocurren en ella.
+Y lo mejor de todo es que hay cliente para Windows, Mac, Blackberry, iOS, Android y Linux. Eso significa que puedes iniciar un chat en tu iPhone y seguirlo en tu Mac luego en el iPad y así sin tener que estar atado a tu celular.
+Esta es mi app principal de mensajería pero pues aún tengo Whats instalado en mi cel pues es necesaria para comunicarme con las personas que no se actualizan como clientes, familiares y similares.</p>
+<h2 id="caffeine"><a href="#caffeine" class="phenomic-HeadingAnchor">#</a><a href="https://itunes.apple.com/mx/app/caffeine/id411246225?mt=12">Caffeine</a></h2>
+<p>Esta pequeña herramienta que vive en tu barra de estado (junto a la hora). Te permite en un click meterle cafeina a tu Mac que no es más que un juego de palabras para indicar que tu Mac no se va a apagar ni siquiera a entrar en reposo o situaciones similares. Es muy útil cuando estás subiendo un video o bajando un archivo pesado y vas a dejar que el proceso ocurra solo sin supervisarlo. Normalmente luego de un tiempo inactiva las Macs entran en reposo y se desconectan de la realidad (es incluye el internet) por eso es útil esta pequeña utilidad.</p>
+<h2 id="pixelmator"><a href="#pixelmator" class="phenomic-HeadingAnchor">#</a><a href="https://itunes.apple.com/mx/app/pixelmator/id407963104?mt=12">Pixelmator</a></h2>
+<p>¿Photoshop? ¿Licencia anual de miles de pesos? ¿Pesada y hambrienta de recursos de mi Mac? ¡Por supuesto que no! Para eso existe Pixelmator que cumple con funciones básicas e intermedias de Photoshop para el rescate en todo tipo de proyectos y retoques express de fotos. Una app que a todos puede servir.</p>
+<h2 id="byword"><a href="#byword" class="phenomic-HeadingAnchor">#</a><a href="https://itunes.apple.com/mx/app/byword/id420212497?mt=12">Byword</a></h2>
+<p>Para cerrar el artículo quiero hablar de mi editor de textos en Mardown favorito. Byword tiene sincronía en iOS y aparte de todo su interfaz es hermosa incluso para quienes no bloguean. Está llena de muchas cositas que facilitan tu vida en la escritura que simplemente les digo que tienen que probar. Y si tienes un blog o escribes con regularidad pues con más razón te digo que necesitas esta app.</p>
+]]></description><link>http://mpz.im/posts/mejores-apps-mac/</link><guid isPermaLink="true">http://mpz.im/posts/mejores-apps-mac/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Thu, 02 Oct 2014 01:08:14 GMT</pubDate></item><item><title><![CDATA[El mejor momento para comprar un iPhone 5s es AHORA]]></title><description><![CDATA[<p>Acabo de tener un momento revelador y creo que vale la pena escribirlo y compartirlo. Todos vivimos el hype que ocurrió el martes, Tim Cook salió al escenario y nos presentó a todos sus nuevos flagships: iPhone 6, iPhone 6 Plus y por supuesto el Watch.</p>
+<p>Obviamente llevo ahorrando para comprarme ese iPhone practicamente desde Enero de este año y tengo en mente comprarlo hasta con grabado láser y todas esas cosas bonitas… Hasta que una serie de eventos que ocurrieron en estos días me hicieron ver otra posibilidad.
+Verán, yo tengo actualmente el iPhone 5, mismo que compré en el 2012 con todo el hype posible del momento a menos de 3 días de su estreno mundial en Estados Unidos. Como se imaginarán, no fue barato y realmente me dolió mucho haber hecho eso de manera tan impulsiva. Recuerdo muy bien cuando llegué de comprarlo super feliz, lo abrí lo puse sobre la cama del hotel en Nueva York y luego simplemente me quedé viendolo cada vez con más tristeza. ¿Cómo pude pagar tanto tanto tanto dinero por este celular que ni siquiera tiene todas las apps optimizadas para su pantalla más grande?
+Y bueno seamos sinceros los iPhones llegaron a la perfección desde el iPhone 5, ¿a que me refiero con eso? Pues basicamente el salto de como responde y se siente el celular respecto al modelo anterior. Del iPhone 4s al 5 la diferencia era como el día y la noche, pero del 5 al 5s, la verdad casi nada. Ya ninguno de los 2 tiene lag ni detalles de usabilidad tan serios.
+En el mercado Android creo que apenas es este año cuando en verdad se están perfeccionando los celulares por lo que realmente el mejor celular que hay es el que decidas comprarte.
+Volviendo al tema, decidí dar un vistazo a la tienda online de Apple y vi que ahora el iPhone 5s redujo su precio en casi $5,000. Es decir por mucho menos de lo que te vas a poder comprar un iPhone 6 básico(que potencialmente no haya muchas apps optimizadas para su nuevo espacio de pantalla) puedes mejor comprarte el mejor celular iPhone 5s con la garantía extendida y con seguro contra robo. ¿Bastante listo no?
+Les explico bien el ciclo virtuoso, compras ahora un iPhone 5s con garantía extendida (que cubre por pantallas estrelladas, golpes, abolladuras, etc) 2 eventos al año por 3 años y también ofrece cambio de batería por una nueva durante ese periodo de tiempo.
+Eso quiere decir que puedes comprar ese equipo a un precio muy correcto, ser feliz con él durante 1 año, tener seguridad de que si se te cae o rompe, estás cubierto y cuando llegue la hora de renovar lo puedes vender dandole a tu comprador la certeza de que el equipo que le das tiene aún 2 años de garantía y que lo puede dejar como nuevo llevándolo a cambio de batería, pantalla, marco, etc.
+Bang bang, suena como el plan ideal que estaré efectuando a partir de ahora y de igual manera a partir del otro año con algún flagship Android (le traigo ganas al Note 4 siento que apenas este año logró la perfección).
+¿Qué opinan de esta estrategia? Usemos el capitalismo a nuestro favor :D</p>
+]]></description><link>http://mpz.im/posts/iphone-5s-ahora/</link><guid isPermaLink="true">http://mpz.im/posts/iphone-5s-ahora/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Sun, 14 Sep 2014 03:06:55 GMT</pubDate></item><item><title><![CDATA[El arte de ser tu propio jefe]]></title><description><![CDATA[<h1 id="el-arte-de-ser-tu-propio-jefe"><a href="#el-arte-de-ser-tu-propio-jefe" class="phenomic-HeadingAnchor">#</a>El arte de ser tu propio jefe</h1>
+<p>A pesar de que casi toda mi vida he buscado en la medida de lo posible ser mi propio jefe no fue sino hasta apenas un par de meses que entré de lleno en el camino emprendedor con todas las de la ley, lo que implica declaraciones de impuestos, emitir facturar, tener gastos y todas esas cosas bonitas que no te enseñan en la escuela y me hubiera gustado que efectivamente lo hubieran hecho por eso quiero compartirles una pequeña lista de cosas que creo que normalmente nadie te dice sobre el hecho de tener que ser tu propio jefe:</p>
+<h2 id="necesitas-ser-una-persona-auto-motivada"><a href="#necesitas-ser-una-persona-auto-motivada" class="phenomic-HeadingAnchor">#</a>Necesitas ser una persona auto-motivada</h2>
+<p>Quizá esta sea una de las cosas que sea por así decirlo una de las mas obvias de pensar pero ya en la práctica real es muy importante saber que el ser emprendedor no es para todas las personas. Si eres de los que se ponen tristes en cuanto no les salen las cosas entonces ser un empresario no es para ti, la realidad es que vas a arruinarlo una gran gran graaaaaan cantidad de veces y en la medida en que te sepas recoger todos los días y volverlo a intentar con más ganas al día siguiente pues será así como lograrás encontrar quizá por accidente, quizá por esfuerzo, quizá por brillante tu modelo de negocios y una vez que lo encuentres pues entonces ya empieza un camino de cosas más felices, pero ni siquiera termina ahí. Es un proceso diario de estarte enfrentando al mundo solo y tener que hacerlo con actitud renovada.</p>
+<p>Lo más importante que puedes hacer para estar siempre motivado es en primer primer lugar dormir bien. Es completamente necesario que duermas al menos 7 horas diarias para poder funcionar de manera óptima. Ajusta tus horarios para que todo salga de manera correcta. El ejercicio también es importante pues te da la energía y vigor para salir a ganar, pero creo que antes que el ejercicio está el sueño.</p>
+<h2 id="incertidumbre-incertidumbre-siempre"><a href="#incertidumbre-incertidumbre-siempre" class="phenomic-HeadingAnchor">#</a>Incertidumbre… incertidumbre SIEMPRE</h2>
+<p>Alguna vez leí que un vendedor solo es tan bueno como su mes anterior y eso es completamente cierto en el mundo de los emprendedores, todo el tiempo tienes que salir a encontrar a tus clientes, conseguir ventas y mover dinero. En la medida en que lo hagas bien habrá dinero para tu negocio y para ti, de lo contrario pues whooops intenta con más ganas mañana.</p>
+<p>Al ver esto te das cuenta de lo paternalista que es el Estado Mexicano pues un empleado se acostumbra a que ‘swag’ puede trabajar o no, vender o no y de todas maneras recibe tu cheque todos los meses de manera puntual y tantito no lo recibe y pues ‘oh, gran problema’ que se endeude la empresa para pagarme. En el mundo del emprendedor sabes que realmente para que haya dinero lo debes generar tu. Eso te da mayores recompensas porque puedes verte siendo premiado de manera proporcional al esfuerzo que le des a tu empresa mes tras mes.</p>
+<p>Por cierto, un empresario gana dos veces ;) ganas tu salario como empleado de tu empresa y ganas al final con las utilidades. Por fin algo que tiene más sentido a quien pone la cara en todos lados.</p>
+<p>La gran realidad como dirían en la película nueva del Planeta de los Simios, los simios (personas) siempre buscarán la rama más fuerte de donde aferrarse. Esto quiere decir que aunque tu sepas en tu corazón que hay incertidumbre todo el tiempo, es tu deber transmitir seguridad a tus empleados/socios/interesados pues en la manera en que lo logres hacer pues van saliendo mejor las cosas. En pocas palabras te la tienes que creer primero tu para que entonces los demás te crean y más importante, te sigan o te compren. La incertidumbre existe y existirá en todo momento tu trabajo es ser alguien con confianza en si si mismo y en sus acciones.</p>
+<p>Es muy bueno pero no indispensable tener a alguien que te quiera y te esté recordando también que puedes lograrlo como en mi caso lo hace mi novia Susy y siempre que la veo me inyecta de energía para seguir creciendo y creciendo.</p>
+<h2 id="no-tengas-miedo-a-la-formalidad"><a href="#no-tengas-miedo-a-la-formalidad" class="phenomic-HeadingAnchor">#</a>No tengas miedo a la formalidad</h2>
+<p>Muchas personas tienen miedo a hacer sus operaciones ya de manera formal, pero debo decirles que hasta ahora creo que es un camino muy correcto pues incentiva el crecimiento de tu empresa a diferencia de la metodología informal.</p>
+<p>Déjenme explicarme: pasa que pues en un inicio cuando ganas dinero y así suele ser muy fácil agarrar tus ganancias de caja chica para comprar tonterías. Tengo una anécdota muy buena que me enseñó eso en el año 2012 con la salida del iPhone 5 y unos árabes formadores profesionales de filas, que digamos que hizo ver que no es el camino correcto a seguir.</p>
+<p>Y les pasa a una gran gran cantidad de emprendedores, pues al no tener que rendir cuentas a nadie y de alguna manera pues ‘es mi dinero, yo lo trabajé’ que incluso personas con estudios universitarios caen en esta trampa, ahora imaginen al resto de la población.</p>
+<p>OK, ¿pero que tiene que ver la formalidad con todo esto? pues verán, al momento en que tu empiezas a facturar tus ingresos pues llega un problema pues tu estás declarando que tienes ese dicho ingreso. Entonces la manera de ‘evitar’ esa situación es teniendo gastos pero obviamente solo pueden ser gastos relacionados a tu negocio entonces lo que te obliga a hacer es a reinvertir en tu negocio, re-abastecer stocks, pagar tu gasolina, etc. El hacer eso le da algo de disciplina a tu operación y obviamente te va a beneficiar de manera directa a ti y a la economía de tus alrededores. Esto fue algo que en la universidad me explicó Pepe Irigoyen co-fundador de CineMagic y que en ese momento no había entendido muy bien hasta ahora.</p>
+<p>Claro para que sea adecuado necesitas primero haber encontrado tu modelo de negocios para tener más certeza en ese rubro. Y teniendo tu contabilidad en orden puedes promediar y así para tener una idea de tus ingresos mensuales y de la misma forma planear los gastos de la empresa de la misma manera. En fin tiene su chiste y hay muchos métodos para lograrlo, pero creo que es un buen camino a seguir.</p>
+<h2 id="debes-aprender-a-merecer-y-a-saber-pedir"><a href="#debes-aprender-a-merecer-y-a-saber-pedir" class="phenomic-HeadingAnchor">#</a>Debes aprender a ‘merecer’ y a saber pedir</h2>
+<p>Esto es algo que no había podido concretar mucho en palabras solo en sentimientos hasta que uno de mis amigos con un espíritu de alto pensador político filosófico me dijo: “yo tengo lo que tengo porque trabajo por ello y lo merezco, nada más” y en ese momento dije: ‘wau tiene razón es la manera adecuada de decirlo’. A lo que voy es que no te debe temblar la voz para cobrar, para pedir lo que te corresponde por tu trabajo y para negociar términos favorables para ti y tu empresa. En la medida en que sepas pedir te van a dar y aunque en un inicio no funcione tanto, si te esfuerzas en ser siempre el mejor y demuestras ser el mejor entonces no habrá motivo para que tus clientes te paguen lo que pides y cada vez más incluso.</p>
+<h2 id="aprovecha-a-tus-papás-mientras-puedas"><a href="#aprovecha-a-tus-pap%C3%A1s-mientras-puedas" class="phenomic-HeadingAnchor">#</a>Aprovecha a tus papás mientras puedas</h2>
+<p>El proceso de crecimiento de un emprendedor es exponencial, lo cual implica un inicio lento lento leeeentoooo. Por eso lo ideal en la medida de lo posible es que consideres la manera de aminorar gastos por ejemplo viviendo con tus papás, familiares, etc. Pues a veces el tener que lidiar con una renta, luz, internet, muchacha, etc etc puede generar que prefieras la seguridad de un empleo normal o que retrase el inicio de tu carrera empresarial pues debes primero crear ese colchón financiero para soportar la curva de fracasos inicial. Ahora imagina con hijos, deudas en tarjetas de crédito, deudas escolares, etc. No estoy diciendo que sea imposible, solo se dificulta más. Pero mientras seas una persona automotivada como debes ser, pues nada es imposible para ti.</p>
+<p>Ignora las presiones sociales que puedan existir en ese rubro, recuerda que son impuestas de manera mediática a las personas y en general lo dicen sin en verdad pensar de lo que están hablando. No ahondaré en esto, pero simplemente necesitas ser alguien muy seguro de ti mismo o misma y como siempre la automotivación es clave.</p>
+<h2 id="fin-de-momento"><a href="#fin-de-momento" class="phenomic-HeadingAnchor">#</a>Fin de momento</h2>
+<p>Creo que de momento ya terminaré este artículo espero les haya gustado el tema es muy muy amplio. Si quieren que siga escribiendo de esto pues dejen un comentario o algo para que sepa. ¿Están de acuerdo con lo que hable?</p>
+]]></description><link>http://mpz.im/posts/arte-jefe/</link><guid isPermaLink="true">http://mpz.im/posts/arte-jefe/</guid><category><![CDATA[Article]]></category><dc:creator><![CDATA[mike3run]]></dc:creator><pubDate>Mon, 08 Sep 2014 06:48:14 GMT</pubDate></item></channel></rss>
