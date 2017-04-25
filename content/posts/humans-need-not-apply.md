@@ -14,7 +14,7 @@ categories:
 
 Quiero que de entrada dejes de hacer todo lo que estás haciendo y veas este video solo para refrescar ideas.
 
-<iframe class="youtube-player" type="text/html" width="640" height="390" src="http://www.youtube.com/embed/7Pq-S557XQU?version=3&amp;rel=1&amp;fs=1&amp;autohide=2&amp;showsearch=0&amp;showinfo=1&amp;iv_load_policy=1&amp;wmode=transparent" allowfullscreen="true" style="border:0;"></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/7Pq-S557XQU" frameborder="0" allowfullscreen></iframe>
 
 El video no es tan nuevo ya tiene un año desde que salió y en su momento lo compartí en Facebook. En parte fue gracias a ver este video que decidí comenzar a aprender a programar para tener el control de mi destino en mis manos. Ya que aunque México y particularmente Oaxaca se encuentren muy lejos de las olas de cambio tecnológicas el hacer como que no existen es una tonteria. Ojalá hubiera visto con más claridad eso antes y hasta cierto punto podía verlo pero no sentía que podía aportar algo o hacer algo al respecto. Ahora que he leído [ZerotoOne](http://zerotoonebook.com/) mis ojos se encuentran mucho más abiertos a todo lo que es nuestra sociedad en realidad. Este libro vale su peso en oro, no lo podría recomendar más, escrito por Peter Thiel uno de los fundadores de Paypal. Peter Thiel fue además el primer inversionista externo de Facebook con un total de 10.2% de acciones. El wey sabe de lo que habla y deberías hacerle caso.
 
