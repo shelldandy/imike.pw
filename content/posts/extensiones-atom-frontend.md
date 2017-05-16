@@ -58,7 +58,7 @@ Sin embargo algunas cosas que he notado no me gustan tanto pero siento que es un
 
   Este pequeño plugin hace una cosa y la hace muy bien toma tus sucias unidades de pixeles para convertirlas en hermosas unidades en EMs, REMs, %s, etc.
 
-  Lo otro que está también increible es el hecho de que deja el comentario para que sepas en el futuro como estaban tus medidas en pixeles y que base se tomó para dicho 
+  Lo otro que está también increible es el hecho de que deja el comentario para que sepas en el futuro como estaban tus medidas en pixeles y que base se tomó para dicho
 
 
   ![¿A poco no dan ganas de llorar?](https://i.github-camo.com/0d60d3bb7f64d43483dd12c52ee711d025befcb9/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f736574686c6f70657a6d652f61746f6d2d6373732d756e69742d636f6e7665727465722f6d61737465722f7265736f75726365732f6d756c7469706c652d6c696e65732e676966)
@@ -80,7 +80,7 @@ Sin embargo algunas cosas que he notado no me gustan tanto pero siento que es un
 
 
 
-  Este plugin es muy simple, muestra en el lado derecho (o donde queramos, la verdad) de la pantalla un pequeño mapa para ver todo nuestro código de manera simple. 
+  Este plugin es muy simple, muestra en el lado derecho (o donde queramos, la verdad) de la pantalla un pequeño mapa para ver todo nuestro código de manera simple.
 
   _Como lo vió en Sublime Text_
 
@@ -91,7 +91,7 @@ Sin embargo algunas cosas que he notado no me gustan tanto pero siento que es un
 
 
 
-  ![A poco no está bonito](https://i.github-camo.com/16c0c12a183c6f57fb33481984593a515777d5e8/68747470733a2f2f6769746875622e636f6d2f61626533332f61746f6d2d7069676d656e74732f626c6f622f6d61737465722f7265736f75726365732f7069676d656e74732e6769663f7261773d74727565)
+  ![A poco no está bonito](https://i.github-camo.com/802d8b759d01e70861f95f99495731f19b145b03/687474703a2f2f61626533332e6769746875622e696f2f61746f6d2d7069676d656e74732f7069676d656e74732e6769663f7261773d74727565)
 
   A poco no está bonito
 
@@ -106,7 +106,7 @@ Sin embargo algunas cosas que he notado no me gustan tanto pero siento que es un
 
 
 
-  ![Much wow!](https://i.github-camo.com/def93226a57aec0c1ceeb66bcbdaa0fdec0a4c29/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f44616e42726f6f6b65722f66696c652d69636f6e732f6d61737465722f66696c652d69636f6e732e706e67)
+  ![Much wow!](https://i.github-camo.com/fb720dc73a9cf634fef9b11e87f0cd194284e3be/68747470733a2f2f7261772e67697468756275736572636f6e74656e742e636f6d2f66696c652d69636f6e732f61746f6d2f363731343730366632363865323537313030653033633965623532383139636239376164353730622f707265766965772e706e67)
 
   Much wow!
 
