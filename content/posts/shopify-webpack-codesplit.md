@@ -43,7 +43,7 @@ __webpack_public_path__ = myRuntimePublicPath
 // rest of your application entry
 ```
 
-> See this discussion for more information on __webpack_public_path__.
+> See this [discussion](https://github.com/webpack/webpack/issues/2776#issuecomment-233208623) for more information on __webpack_public_path__.
 
 BINGO!!
 
@@ -79,7 +79,7 @@ module.exports = {
  // rest of config blah blah
  output: {
    // rest of output blah
-	 chunkFilename: '[name].chunk.[chunkhash:5].js',
+   chunkFilename: '[name].chunk.[chunkhash:5].js',
  }
 }
 ```
