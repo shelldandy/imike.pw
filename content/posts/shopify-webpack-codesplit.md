@@ -17,7 +17,7 @@ Open up your console on Chrome and click the button!
 ## Why is this a problem?
 Well thanks for asking 😉 basically Shopify has its own CDN thing which cache-busts the files you usually access it like this:
 
-```
+```liquid
 Inside a liquid file...
 {{ 'somefile.js' | asset_url }}
 
@@ -38,7 +38,7 @@ Quoting from there:
 
 > In cases where the publicPath of output files can't be known at compile time, it can be left blank and set dynamically at runtime in the entry file using the free variable __webpack_public_path__.
 
-```
+```js
 __webpack_public_path__ = myRuntimePublicPath
 // rest of your application entry
 ```
@@ -52,7 +52,7 @@ So with that knowledge in hand let's do a bit of liquid hacking because what is 
 
 `layout/theme.liquid`
 
-```
+```liquid
   {% capture randomFile %}{{ 'esketit.js' | asset_url }}{% endcapture %}
   {% assign assetsPath = randomFile | split: 'esketit.js' | first %}
   <script>
@@ -62,19 +62,19 @@ So with that knowledge in hand let's do a bit of liquid hacking because what is 
 
 Create a `public-path.js` file on your root of your JS entry point and add this:
 
-```
+```js
 __webpack_public_path__ = window.__webpack_public_path__
 ```
 
 And in your entry point add this right on top:
 
-```
+```js
 import './public-path'
 ```
 
 So now this sort of works except Shopify uses some very hard cache and now when you require the files you just ask for their normal name so tweak your `webpack.config.js` 
 
-```
+```js
 module.exports = {
  // rest of config blah blah
  output: {
@@ -92,5 +92,7 @@ Yeah, it's hacky but it works and so far no one has come up with a solution so h
 So far these cool insights are now part of our [Shopify Generator](https://www.npmjs.com/package/@pixel2html/generator-shopify) from Pixel2HTML (where I work and maintain our OSS Endeavors) so you can try that right now if you want to without configuring anything.
 
 [Demo!](https://pixelbikeshop.myshopify.com/)
+
 [npm repo](https://www.npmjs.com/package/@pixel2html/generator-shopify)
+
 [Code and Example Repo](https://github.com/Pixel2HTML/Pixel2HTML/tree/master/packages/generator-shopify)
