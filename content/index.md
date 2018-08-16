@@ -13,7 +13,7 @@ My name is Miguel Palau I'm a Web Developer from [Puebla, México](https://en.wi
 
 I love working with modern web technologies and I'm passionate about always staying sharp on my skills and learning new stuff all the time.
 
-Also I enjoy working with and contributing to [open source](https://github.com/mike3run/) and also I love tweaking my terminal and [dotfiles](https://github.com/mike3run/dotfiles)
+Also I enjoy working with and contributing to [open source](https://github.com/shelldandy/) and also I love tweaking my terminal and [dotfiles](https://github.com/mike3run/dotfiles)
 
 Currently I work as a FullStack Developer at [Pixel2Html](https://www.pixel2html.com/)
 
