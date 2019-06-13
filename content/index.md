@@ -1,7 +1,7 @@
 ---
 title: Miguel Palau
 layout: Homepage
-hero: https://cldup.com/-LMRRtF6f8.jpg
+hero: https://cl.ly/85ace316cba9/hero.jpg
 cta:
   label: Posts
   link: "posts"
@@ -15,7 +15,7 @@ I love working with modern web technologies and I'm passionate about always stay
 
 Also I enjoy working with and contributing to [open source](https://github.com/shelldandy/) and also I love tweaking my terminal and [dotfiles](https://github.com/mike3run/dotfiles)
 
-Currently I work as a FullStack Developer at [Cratejoy](https://www.cratejoy.com/) where I do mostly [ReactJS](https://reactjs.org/) and [Flask](http://flask.pocoo.org/) on the regular.
+Currently I work as a FullStack Developer at [Cratejoy](https://www.cratejoy.com/) where I do mostly [ReactJS](https://reactjs.org/) and [Flask](https://en.wikipedia.org/wiki/Flask_%28web_framework%29) on the regular.
 
 I organize a monthly Meetup in Puebla called [DevNights](https://www.meetup.com/es-ES/DevNightsMX/) were we talk about open source technologies, eat some 🍕 and have a few 🍺. If you're around the area you should probably go 💁.
 
