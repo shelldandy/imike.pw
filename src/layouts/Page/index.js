@@ -48,7 +48,8 @@ const Page = (
     { name: 'twitter:creator', content: `@${pkg.twitter}` },
     { name: 'twitter:description', content: head.description },
     { name: 'twitter:image', content: socialImage },
-    { name: 'description', content: head.description }
+    { name: 'description', content: head.description },
+    { name: 'google-site-verification', content: 'wQpbww0bsB4UN6R4vxZXLUJiPIYzvzTrmZldhEIy5pA' },
   ]
 
   return (
